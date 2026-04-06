@@ -238,6 +238,37 @@ def fetch_samsung_api(date_str: str, api_base: str, fid: str, referer: str) -> l
 
 
 # ─────────────────────────────────────────
+# 시장 데이터 — AUM / 거래대금 (Naver Finance)
+# ─────────────────────────────────────────
+
+def fetch_market_data(code: str) -> dict:
+    """Naver Finance Polling API — AUM(순자산총액), 거래대금 반환"""
+    url = f"https://polling.finance.naver.com/api/realtime/domestic/stock/{code}"
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=10)
+        if resp.status_code != 200:
+            return {}
+        d = resp.json().get("datas", [{}])[0]
+        aum_raw = d.get("marketValueFullRaw")
+        tv_raw  = d.get("accumulatedTradingValueRaw")
+        return {
+            "aum":           int(aum_raw) if aum_raw else None,
+            "trading_value": int(tv_raw)  if tv_raw  else None,
+        }
+    except Exception as e:
+        log.debug(f"  fetch_market_data({code}) 실패: {e}")
+        return {}
+
+
+def _fmt_억(won) -> str:
+    """원 단위 정수를 억 단위 문자열로 포맷. 예: 897911250000 → '8,979억'"""
+    if won is None:
+        return "—"
+    억 = round(won / 1_0000_0000)
+    return f"{억:,}억"
+
+
+# ─────────────────────────────────────────
 # 통합 수집 (날짜 자동 후퇴)
 # ─────────────────────────────────────────
 
@@ -509,6 +540,7 @@ def generate_html(results: dict, today: str) -> Path:
         cfg = ETF_CONFIG[etf_key]
         curr = data["curr"]
         periods_data = data["periods"]  # {period_key: {diff, prev, prev_date}}
+        market = data.get("market", {})
 
         # 탭 버튼 + 기간별 콘텐츠
         tab_buttons = []
@@ -571,6 +603,11 @@ def generate_html(results: dict, today: str) -> Path:
             <div class="panel-name" style="color:{cfg['color']}">{cfg['name']}</div>
             <div class="panel-meta">{cfg['manager']} · {cfg['code']} · 운보수 {cfg['fee']}</div>
             <div class="panel-meta muted">{len(curr)}종목 보유 · 기준일: {today}</div>
+            <div class="panel-market">
+              <span class="mkt-item">🏦 AUM <strong>{_fmt_억(market.get('aum'))}</strong></span>
+              <span class="mkt-sep">·</span>
+              <span class="mkt-item">📊 거래대금 <strong>{_fmt_억(market.get('trading_value'))}</strong></span>
+            </div>
           </div>
           <div class="tab-bar" id="tabs_{etf_key}">
             {"".join(tab_buttons)}
@@ -650,6 +687,9 @@ tr:hover td{{background:#1a1a40}}
 .full-table{{margin-top:10px}}
 .stock-link{{color:#e0e0e0;text-decoration:none}}
 .stock-link:hover{{color:#3498db;text-decoration:underline}}
+.panel-market{{padding:6px 20px 10px;font-size:0.8rem;color:#888;border-bottom:1px solid #1e1e3a}}
+.mkt-item strong{{color:#ccc;font-weight:700}}
+.mkt-sep{{margin:0 8px;color:#333}}
 .source{{text-align:center;color:#333;font-size:0.75rem;margin-top:28px;padding-bottom:20px}}
 .source a{{color:#3498db}}
 .refresh-hint{{text-align:center;background:#12122a;border-radius:8px;padding:12px;margin-bottom:20px;font-size:0.82rem;color:#888}}
@@ -714,6 +754,7 @@ def run(target_date: str = None, force_fetch: bool = False):
 
     results = {}
     for etf_key in ETF_CONFIG:
+        cfg = ETF_CONFIG[etf_key]
         # 오늘 데이터 로드 or 수집
         curr = load_holdings(etf_key, today)
         if not curr or force_fetch:
@@ -758,7 +799,12 @@ def run(target_date: str = None, force_fetch: bool = False):
             else:
                 log.info(f"  ℹ️  {plabel}: 비교 데이터 없음")
 
-        results[etf_key] = {"curr": curr, "periods": periods_data}
+        # 시장 데이터 (AUM, 거래대금)
+        market = fetch_market_data(cfg["code"])
+        if market.get("aum"):
+            log.info(f"  💰 AUM: {_fmt_억(market['aum'])} · 거래대금: {_fmt_억(market['trading_value'])}")
+
+        results[etf_key] = {"curr": curr, "periods": periods_data, "market": market}
 
     out = generate_html(results, today)
     print(f"\n🎉 완료! 브라우저에서 열기:")
