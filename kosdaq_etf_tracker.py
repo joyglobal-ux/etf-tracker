@@ -105,9 +105,6 @@ HEADERS = {
 
 XLSX_NS = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
 
-# Naver Finance ETF API (ETF 시세/순자산/거래대금 일괄 조회)
-NAVER_ETF_API = "https://finance.naver.com/api/sise/etfItemList.nhn?etfType=0&targetColumn=market_sum&sortOrder=desc"
-
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -117,42 +114,6 @@ logging.basicConfig(
     ],
 )
 log = logging.getLogger(__name__)
-
-
-# ─────────────────────────────────────────
-# ETF 시세/순자산/거래대금 (Naver Finance)
-# ─────────────────────────────────────────
-
-def fetch_etf_metadata() -> dict:
-    """Naver Finance ETF API에서 4개 ETF의 시세/순자산/거래대금을 일괄 조회.
-    Returns: {etf_code: {nowVal, changeRate, marketSum, amount, nav}} 형태."""
-    our_codes = {cfg["code"] for cfg in ETF_CONFIG.values()}
-    try:
-        resp = requests.get(NAVER_ETF_API, headers=HEADERS, timeout=15)
-        if resp.status_code != 200:
-            log.warning(f"  Naver ETF API: HTTP {resp.status_code}")
-            return {}
-        data = resp.json()
-        items = data.get("result", {}).get("etfItemList", [])
-        result = {}
-        for item in items:
-            code = item.get("itemcode", "")
-            if code in our_codes:
-                result[code] = {
-                    "nowVal": item.get("nowVal"),           # 현재가
-                    "changeVal": item.get("changeVal"),     # 전일 대비 변동
-                    "changeRate": item.get("changeRate"),    # 등락률(%)
-                    "nav": item.get("nav"),                 # 기준가(NAV)
-                    "amount": item.get("amonut"),           # 거래대금 (백만원)
-                    "marketSum": item.get("marketSum"),      # 순자산총액 (억원)
-                    "quant": item.get("quant"),             # 거래량
-                }
-        if result:
-            log.info(f"  📡 Naver ETF 시세 조회 완료: {len(result)}개 ETF")
-        return result
-    except Exception as e:
-        log.warning(f"  Naver ETF API 조회 실패: {e}")
-        return {}
 
 
 # ─────────────────────────────────────────
@@ -274,6 +235,37 @@ def fetch_samsung_api(date_str: str, api_base: str, fid: str, referer: str) -> l
     except Exception as e:
         log.debug(f"  Samsung API failed ({fid}, {date_str}): {e}")
         return []
+
+
+# ─────────────────────────────────────────
+# 시장 데이터 — AUM / 거래대금 (Naver Finance)
+# ─────────────────────────────────────────
+
+def fetch_market_data(code: str) -> dict:
+    """Naver Finance Polling API — AUM(순자산총액), 거래대금 반환"""
+    url = f"https://polling.finance.naver.com/api/realtime/domestic/stock/{code}"
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=10)
+        if resp.status_code != 200:
+            return {}
+        d = resp.json().get("datas", [{}])[0]
+        aum_raw = d.get("marketValueFullRaw")
+        tv_raw  = d.get("accumulatedTradingValueRaw")
+        return {
+            "aum":           int(aum_raw) if aum_raw else None,
+            "trading_value": int(tv_raw)  if tv_raw  else None,
+        }
+    except Exception as e:
+        log.debug(f"  fetch_market_data({code}) 실패: {e}")
+        return {}
+
+
+def _fmt_억(won) -> str:
+    """원 단위 정수를 억 단위 문자열로 포맷. 예: 897911250000 → '8,979억'"""
+    if won is None:
+        return "—"
+    억 = round(won / 1_0000_0000)
+    return f"{억:,}억"
 
 
 # ─────────────────────────────────────────
@@ -542,35 +534,13 @@ def _build_diff_sections(diff: dict) -> str:
     return "".join(sections)
 
 
-def _format_amount(val):
-    """백만원 → 억원 또는 조원 단위 포맷"""
-    if val is None:
-        return "—"
-    if val >= 1_000_000:
-        return f"{val / 1_000_000:.1f}조"
-    if val >= 10_000:
-        return f"{val / 100:.0f}억"
-    if val >= 1_000:
-        return f"{val / 100:.1f}억"
-    return f"{val:,.0f}백만"
-
-
-def _format_market_sum(val):
-    """억원 단위 포맷"""
-    if val is None:
-        return "—"
-    if val >= 10_000:
-        return f"{val / 10_000:.2f}조"
-    return f"{val:,}억"
-
-
-def generate_html(results: dict, today: str, etf_meta: dict = None) -> Path:
-    etf_meta = etf_meta or {}
+def generate_html(results: dict, today: str) -> Path:
     panels_html = []
     for etf_key, data in results.items():
         cfg = ETF_CONFIG[etf_key]
         curr = data["curr"]
         periods_data = data["periods"]  # {period_key: {diff, prev, prev_date}}
+        market = data.get("market", {})
 
         # 탭 버튼 + 기간별 콘텐츠
         tab_buttons = []
@@ -627,36 +597,17 @@ def generate_html(results: dict, today: str, etf_meta: dict = None) -> Path:
         prev_map = {h["name"]: h for h in default_prev}
         full_rows = _full_rows(curr, prev_map)
 
-        # ETF 시세 메타데이터
-        meta = etf_meta.get(cfg["code"], {})
-        meta_html = ""
-        if meta:
-            price = meta.get("nowVal")
-            chg_rate = meta.get("changeRate")
-            mkt_sum = meta.get("marketSum")
-            amount = meta.get("amount")
-
-            price_str = f"{price:,}" if price else "—"
-            chg_cls = "green" if (chg_rate or 0) > 0 else ("red" if (chg_rate or 0) < 0 else "muted")
-            chg_sign = "+" if (chg_rate or 0) > 0 else ""
-            chg_str = f"{chg_sign}{chg_rate:.2f}%" if chg_rate is not None else "—"
-            mkt_str = _format_market_sum(mkt_sum)
-            amt_str = _format_amount(amount)
-
-            meta_html = f"""
-            <div class="etf-meta-bar">
-              <div class="meta-item"><span class="meta-label">현재가</span><span class="meta-val">{price_str}</span><span class="meta-chg {chg_cls}">{chg_str}</span></div>
-              <div class="meta-item"><span class="meta-label">순자산</span><span class="meta-val">{mkt_str}</span></div>
-              <div class="meta-item"><span class="meta-label">거래대금</span><span class="meta-val">{amt_str}</span></div>
-            </div>"""
-
         panel = f"""
         <div class="panel">
           <div class="panel-header" style="border-top:3px solid {cfg['color']}">
             <div class="panel-name" style="color:{cfg['color']}">{cfg['name']}</div>
             <div class="panel-meta">{cfg['manager']} · {cfg['code']} · 운보수 {cfg['fee']}</div>
             <div class="panel-meta muted">{len(curr)}종목 보유 · 기준일: {today}</div>
-            {meta_html}
+            <div class="panel-market">
+              <span class="mkt-item">🏦 AUM <strong>{_fmt_억(market.get('aum'))}</strong></span>
+              <span class="mkt-sep">·</span>
+              <span class="mkt-item">📊 거래대금 <strong>{_fmt_억(market.get('trading_value'))}</strong></span>
+            </div>
           </div>
           <div class="tab-bar" id="tabs_{etf_key}">
             {"".join(tab_buttons)}
@@ -736,13 +687,11 @@ tr:hover td{{background:#1a1a40}}
 .full-table{{margin-top:10px}}
 .stock-link{{color:#e0e0e0;text-decoration:none}}
 .stock-link:hover{{color:#3498db;text-decoration:underline}}
+.panel-market{{padding:6px 20px 10px;font-size:0.8rem;color:#888;border-bottom:1px solid #1e1e3a}}
+.mkt-item strong{{color:#ccc;font-weight:700}}
+.mkt-sep{{margin:0 8px;color:#333}}
 .source{{text-align:center;color:#333;font-size:0.75rem;margin-top:28px;padding-bottom:20px}}
 .source a{{color:#3498db}}
-.etf-meta-bar{{display:flex;gap:16px;margin-top:10px;padding:8px 12px;background:#0d0d1a;border-radius:8px}}
-.meta-item{{display:flex;align-items:baseline;gap:5px}}
-.meta-label{{font-size:0.7rem;color:#555;font-weight:600}}
-.meta-val{{font-size:0.95rem;color:#fff;font-weight:700;font-variant-numeric:tabular-nums}}
-.meta-chg{{font-size:0.8rem;font-weight:700;margin-left:2px}}
 .refresh-hint{{text-align:center;background:#12122a;border-radius:8px;padding:12px;margin-bottom:20px;font-size:0.82rem;color:#888}}
 .refresh-hint code{{background:#1e1e3a;padding:2px 6px;border-radius:3px;color:#7ecfff;font-size:0.78rem}}
 </style>
@@ -803,11 +752,9 @@ def run(target_date: str = None, force_fetch: bool = False):
     log.info(f"코스닥 액티브 ETF 트래커 — {today}")
     log.info(f"{'='*55}")
 
-    # ETF 시세/순자산/거래대금 조회 (Naver Finance)
-    etf_meta = fetch_etf_metadata()
-
     results = {}
     for etf_key in ETF_CONFIG:
+        cfg = ETF_CONFIG[etf_key]
         # 오늘 데이터 로드 or 수집
         curr = load_holdings(etf_key, today)
         if not curr or force_fetch:
@@ -852,9 +799,14 @@ def run(target_date: str = None, force_fetch: bool = False):
             else:
                 log.info(f"  ℹ️  {plabel}: 비교 데이터 없음")
 
-        results[etf_key] = {"curr": curr, "periods": periods_data}
+        # 시장 데이터 (AUM, 거래대금)
+        market = fetch_market_data(cfg["code"])
+        if market.get("aum"):
+            log.info(f"  💰 AUM: {_fmt_억(market['aum'])} · 거래대금: {_fmt_억(market['trading_value'])}")
 
-    out = generate_html(results, today, etf_meta=etf_meta)
+        results[etf_key] = {"curr": curr, "periods": periods_data, "market": market}
+
+    out = generate_html(results, today)
     print(f"\n🎉 완료! 브라우저에서 열기:")
     print(f"   open '{out}'")
     return out
