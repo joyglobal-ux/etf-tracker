@@ -18,9 +18,11 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# 2. Git commit + push
+# 2. Git pull (개인 맥북 커밋 동기화) + commit + push
 cd "$ETF_DIR"
 DATE=$(date '+%Y-%m-%d')
+
+git pull origin main --no-rebase --no-edit >> "$LOG" 2>&1
 
 git add data/ kosdaq_etf_report.html >> "$LOG" 2>&1
 git commit -m "Daily update: $DATE" >> "$LOG" 2>&1
