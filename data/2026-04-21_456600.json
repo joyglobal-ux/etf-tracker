@@ -1,0 +1,233 @@
+{
+  "date": "2026-04-21",
+  "etf": "TIME_AI",
+  "code": "456600",
+  "fetched_at": "2026-04-21T12:12:42.958989",
+  "holdings": [
+    {
+      "name": "NVIDIA Corp",
+      "code": "NVDA US EQUITY",
+      "weight": 6.23
+    },
+    {
+      "name": "Sandisk Corp/DE",
+      "code": "SNDK US EQUITY",
+      "weight": 5.96
+    },
+    {
+      "name": "Intel Corp",
+      "code": "INTC US EQUITY",
+      "weight": 5.07
+    },
+    {
+      "name": "Ciena Corp",
+      "code": "CIEN US EQUITY",
+      "weight": 4.7
+    },
+    {
+      "name": "Western Digital Corp",
+      "code": "WDC US EQUITY",
+      "weight": 4.55
+    },
+    {
+      "name": "현금",
+      "code": "",
+      "weight": 4.16
+    },
+    {
+      "name": "삼성전기",
+      "code": "009150",
+      "weight": 3.86
+    },
+    {
+      "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+      "code": "TSM US EQUITY",
+      "weight": 3.65
+    },
+    {
+      "name": "Seagate Technology Holdings PLC",
+      "code": "STX US EQUITY",
+      "weight": 3.63
+    },
+    {
+      "name": "ARM Holdings PLC",
+      "code": "ARM US EQUITY",
+      "weight": 3.36
+    },
+    {
+      "name": "Bloom Energy Corp",
+      "code": "BE US EQUITY",
+      "weight": 3.33
+    },
+    {
+      "name": "Coinbase Global Inc",
+      "code": "COIN US EQUITY",
+      "weight": 3.07
+    },
+    {
+      "name": "Lumentum Holdings Inc",
+      "code": "LITE US EQUITY",
+      "weight": 3.03
+    },
+    {
+      "name": "SK하이닉스",
+      "code": "000660",
+      "weight": 3.02
+    },
+    {
+      "name": "Alphabet Inc",
+      "code": "GOOG US EQUITY",
+      "weight": 2.7
+    },
+    {
+      "name": "TIME 차이나AI테크액티브",
+      "code": "0043Y0",
+      "weight": 2.45
+    },
+    {
+      "name": "GE Vernova Inc",
+      "code": "GEV US EQUITY",
+      "weight": 2.36
+    },
+    {
+      "name": "Strategy Inc",
+      "code": "MSTR US EQUITY",
+      "weight": 2.28
+    },
+    {
+      "name": "Meta Platforms Inc",
+      "code": "META US EQUITY",
+      "weight": 2.23
+    },
+    {
+      "name": "Circle Internet Group Inc",
+      "code": "CRCL US EQUITY",
+      "weight": 2.2
+    },
+    {
+      "name": "Coherent Corp",
+      "code": "COHR US EQUITY",
+      "weight": 2.08
+    },
+    {
+      "name": "Tesla Inc",
+      "code": "TSLA US EQUITY",
+      "weight": 2.06
+    },
+    {
+      "name": "Broadcom Inc",
+      "code": "AVGO US EQUITY",
+      "weight": 1.91
+    },
+    {
+      "name": "Advanced Micro Devices Inc",
+      "code": "AMD US EQUITY",
+      "weight": 1.84
+    },
+    {
+      "name": "삼성SDI",
+      "code": "006400",
+      "weight": 1.66
+    },
+    {
+      "name": "두산에너빌리티",
+      "code": "034020",
+      "weight": 1.5
+    },
+    {
+      "name": "Tower Semiconductor Ltd",
+      "code": "TSEM US EQUITY",
+      "weight": 1.33
+    },
+    {
+      "name": "삼성전자",
+      "code": "005930",
+      "weight": 1.28
+    },
+    {
+      "name": "Rocket Lab Corp",
+      "code": "RKLB US EQUITY",
+      "weight": 1.27
+    },
+    {
+      "name": "Robinhood Markets Inc",
+      "code": "HOOD US EQUITY",
+      "weight": 1.02
+    },
+    {
+      "name": "Knowledge Atlas Technology JSC Ltd",
+      "code": "2513 HK EQUITY",
+      "weight": 0.95
+    },
+    {
+      "name": "Uranium Energy Corp",
+      "code": "UEC US EQUITY",
+      "weight": 0.94
+    },
+    {
+      "name": "Nebius Group NV",
+      "code": "NBIS US EQUITY",
+      "weight": 0.93
+    },
+    {
+      "name": "LS ELECTRIC",
+      "code": "010120",
+      "weight": 0.9
+    },
+    {
+      "name": "효성중공업",
+      "code": "298040",
+      "weight": 0.9
+    },
+    {
+      "name": "HD현대일렉트릭",
+      "code": "267260",
+      "weight": 0.87
+    },
+    {
+      "name": "ASML Holding NV",
+      "code": "ASML US EQUITY",
+      "weight": 0.86
+    },
+    {
+      "name": "Teradyne Inc",
+      "code": "TER US EQUITY",
+      "weight": 0.84
+    },
+    {
+      "name": "Amazon.com Inc",
+      "code": "AMZN US EQUITY",
+      "weight": 0.81
+    },
+    {
+      "name": "Energy Fuels Inc/Canada",
+      "code": "UUUU US EQUITY",
+      "weight": 0.78
+    },
+    {
+      "name": "Vertiv Holdings Co",
+      "code": "VRT US EQUITY",
+      "weight": 0.77
+    },
+    {
+      "name": "Silicon Motion Technology Corp",
+      "code": "SIMO US EQUITY",
+      "weight": 0.76
+    },
+    {
+      "name": "Microsoft Corp",
+      "code": "MSFT US EQUITY",
+      "weight": 0.68
+    },
+    {
+      "name": "Applied Optoelectronics Inc",
+      "code": "AAOI US EQUITY",
+      "weight": 0.66
+    },
+    {
+      "name": "파두",
+      "code": "440110",
+      "weight": 0.59
+    }
+  ]
+}
