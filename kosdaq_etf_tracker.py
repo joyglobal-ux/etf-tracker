@@ -85,6 +85,18 @@ ETF_CONFIG = {
         "source_idx": 6,
         "disclosure_url": "https://timeetf.co.kr/m11_view.php?idx=6",
     },
+    "KODEX로봇": {
+        "code": "445290",
+        "name": "KODEX 로봇액티브",
+        "manager": "삼성자산운용",
+        "fee": "0.50%",
+        "color": "#ff9800",
+        "source": "samsung",
+        "source_fid": "2ETFH5",
+        "api_base": "https://www.samsungfund.com/api/v1/kodex/product-pdf",
+        "referer": "https://www.samsungfund.com/etf/product/view.do?id=2ETFH5",
+        "disclosure_url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFH5",
+    },
 }
 
 BASE_DIR = Path(__file__).parent

@@ -1,0 +1,198 @@
+{
+  "date": "2026-05-16",
+  "etf": "TIME_AI",
+  "code": "456600",
+  "fetched_at": "2026-05-16T11:20:17.272008",
+  "holdings": [
+    {
+      "name": "Intel Corp",
+      "code": "INTC US EQUITY",
+      "weight": 7.85
+    },
+    {
+      "name": "Sandisk Corp/DE",
+      "code": "SNDK US EQUITY",
+      "weight": 6.89
+    },
+    {
+      "name": "NVIDIA Corp",
+      "code": "NVDA US EQUITY",
+      "weight": 6.32
+    },
+    {
+      "name": "Seagate Technology Holdings PLC",
+      "code": "STX US EQUITY",
+      "weight": 5.7
+    },
+    {
+      "name": "ARM Holdings PLC",
+      "code": "ARM US EQUITY",
+      "weight": 5.58
+    },
+    {
+      "name": "Western Digital Corp",
+      "code": "WDC US EQUITY",
+      "weight": 4.53
+    },
+    {
+      "name": "현금",
+      "code": "",
+      "weight": 4.25
+    },
+    {
+      "name": "Lumentum Holdings Inc",
+      "code": "LITE US EQUITY",
+      "weight": 3.59
+    },
+    {
+      "name": "Advanced Micro Devices Inc",
+      "code": "AMD US EQUITY",
+      "weight": 3.52
+    },
+    {
+      "name": "Amazon.com Inc",
+      "code": "AMZN US EQUITY",
+      "weight": 2.95
+    },
+    {
+      "name": "SK하이닉스",
+      "code": "000660",
+      "weight": 2.92
+    },
+    {
+      "name": "Ciena Corp",
+      "code": "CIEN US EQUITY",
+      "weight": 2.89
+    },
+    {
+      "name": "Circle Internet Group Inc",
+      "code": "CRCL US EQUITY",
+      "weight": 2.65
+    },
+    {
+      "name": "삼성전기",
+      "code": "009150",
+      "weight": 2.63
+    },
+    {
+      "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+      "code": "TSM US EQUITY",
+      "weight": 2.51
+    },
+    {
+      "name": "파두",
+      "code": "440110",
+      "weight": 2.37
+    },
+    {
+      "name": "Coinbase Global Inc",
+      "code": "COIN US EQUITY",
+      "weight": 2.3
+    },
+    {
+      "name": "Alphabet Inc",
+      "code": "GOOG US EQUITY",
+      "weight": 2.13
+    },
+    {
+      "name": "Rocket Lab Corp",
+      "code": "RKLB US EQUITY",
+      "weight": 2.06
+    },
+    {
+      "name": "Bloom Energy Corp",
+      "code": "BE US EQUITY",
+      "weight": 2.05
+    },
+    {
+      "name": "TIME 차이나AI테크액티브",
+      "code": "0043Y0",
+      "weight": 1.99
+    },
+    {
+      "name": "QUALCOMM Inc",
+      "code": "QCOM US EQUITY",
+      "weight": 1.98
+    },
+    {
+      "name": "Kioxia Holdings Corp",
+      "code": "285A JP EQUITY",
+      "weight": 1.97
+    },
+    {
+      "name": "Robinhood Markets Inc",
+      "code": "HOOD US EQUITY",
+      "weight": 1.91
+    },
+    {
+      "name": "Dell Technologies Inc",
+      "code": "DELL US EQUITY",
+      "weight": 1.7
+    },
+    {
+      "name": "Coherent Corp",
+      "code": "COHR US EQUITY",
+      "weight": 1.69
+    },
+    {
+      "name": "Applied Optoelectronics Inc",
+      "code": "AAOI US EQUITY",
+      "weight": 1.66
+    },
+    {
+      "name": "GE Vernova Inc",
+      "code": "GEV US EQUITY",
+      "weight": 1.6
+    },
+    {
+      "name": "Broadcom Inc",
+      "code": "AVGO US EQUITY",
+      "weight": 1.31
+    },
+    {
+      "name": "Vertiv Holdings Co",
+      "code": "VRT US EQUITY",
+      "weight": 1.29
+    },
+    {
+      "name": "Tesla Inc",
+      "code": "TSLA US EQUITY",
+      "weight": 1.24
+    },
+    {
+      "name": "삼성전자",
+      "code": "005930",
+      "weight": 1.18
+    },
+    {
+      "name": "Tower Semiconductor Ltd",
+      "code": "TSEM US EQUITY",
+      "weight": 1.07
+    },
+    {
+      "name": "Strategy Inc",
+      "code": "MSTR US EQUITY",
+      "weight": 0.93
+    },
+    {
+      "name": "Nebius Group NV",
+      "code": "NBIS US EQUITY",
+      "weight": 0.84
+    },
+    {
+      "name": "Knowledge Atlas Technology JSC Ltd",
+      "code": "2513 HK EQUITY",
+      "weight": 0.84
+    },
+    {
+      "name": "Silicon Motion Technology Corp",
+      "code": "SIMO US EQUITY",
+      "weight": 0.6
+    },
+    {
+      "name": "ASML Holding NV",
+      "code": "ASML US EQUITY",
+      "weight": 0.55
+    }
+  ]
+}
