@@ -97,6 +97,30 @@ ETF_CONFIG = {
         "referer": "https://www.samsungfund.com/etf/product/view.do?id=2ETFH5",
         "disclosure_url": "https://www.samsungfund.com/etf/product/view.do?id=2ETFH5",
     },
+    "KoAct바이오": {
+        "code": "462900",
+        "name": "KoAct 바이오헬스케어액티브",
+        "manager": "삼성액티브자산운용",
+        "fee": "0.50%",
+        "color": "#26c6da",
+        "source": "samsung",
+        "source_fid": "2ETFJ9",
+        "api_base": "https://www.samsungactive.co.kr/api/v1/product/etf-pdf",
+        "referer": "https://www.samsungactive.co.kr/etf/view.do?id=2ETFJ9",
+        "disclosure_url": "https://www.samsungactive.co.kr/etf/view.do?id=2ETFJ9",
+    },
+    "KoAct나스닥성장": {
+        "code": "0015B0",
+        "name": "KoAct 미국나스닥성장기업액티브",
+        "manager": "삼성액티브자산운용",
+        "fee": "0.50%",
+        "color": "#7e57c2",
+        "source": "samsung",
+        "source_fid": "2ETFQ1",
+        "api_base": "https://www.samsungactive.co.kr/api/v1/product/etf-pdf",
+        "referer": "https://www.samsungactive.co.kr/etf/view.do?id=2ETFQ1",
+        "disclosure_url": "https://www.samsungactive.co.kr/etf/view.do?id=2ETFQ1",
+    },
 }
 
 BASE_DIR = Path(__file__).parent

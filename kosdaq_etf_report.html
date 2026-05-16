@@ -72,7 +72,7 @@ tr:hover td{background:#1a1a40}
 <body>
 <div class="container">
   <h1>📊 액티브 ETF 트래커</h1>
-  <p class="subtitle">TIME 코스닥액티브 (0162Y0) · KoAct 코스닥액티브 (0163Y0) · KODEX 신재생에너지액티브 (385510) · TIME 글로벌AI인공지능액티브 (456600) · KODEX 로봇액티브 (445290)</p>
+  <p class="subtitle">TIME 코스닥액티브 (0162Y0) · KoAct 코스닥액티브 (0163Y0) · KODEX 신재생에너지액티브 (385510) · TIME 글로벌AI인공지능액티브 (456600) · KODEX 로봇액티브 (445290) · KoAct 바이오헬스케어액티브 (462900) · KoAct 미국나스닥성장기업액티브 (0015B0)</p>
   <p class="subtitle">기준일: <strong style="color:#fff">2026-05-16</strong></p>
   <div class="refresh-hint">
     🔄 매일 오후 6시 이후: <code>python3 kosdaq_etf_tracker.py</code>
@@ -948,9 +948,127 @@ tr:hover td{background:#1a1a40}
             </table>
           </div>
         </div>
+        <div class="panel">
+          <div class="panel-header" style="border-top:3px solid #26c6da">
+            <div class="panel-name" style="color:#26c6da">KoAct 바이오헬스케어액티브</div>
+            <div class="panel-meta">삼성액티브자산운용 · 462900 · 운보수 0.50%</div>
+            <div class="panel-meta muted">28종목 보유 · 기준일: 2026-05-16</div>
+            <div class="panel-market">
+              <span class="mkt-item">🏦 AUM <strong>5,354억</strong></span>
+              <span class="mkt-sep">·</span>
+              <span class="mkt-item">📊 거래대금 <strong>390억</strong></span>
+            </div>
+          </div>
+          <div class="tab-bar" id="tabs_KoAct바이오">
+            <button class="tab-btn active disabled" data-period="1d">전일 대비<span class="tab-date">데이터 없음</span></button><button class="tab-btn  disabled" data-period="1w">1주 전<span class="tab-date">데이터 없음</span></button><button class="tab-btn  disabled" data-period="1m">1개월 전<span class="tab-date">데이터 없음</span></button>
+          </div>
+          <div class="tab-content" id="tab_KoAct바이오_1d" style="display:block"><div class="no-change">아직 충분한 데이터가 없습니다<br><span class="muted" style="font-size:0.8rem">수집 시작: 2026-05-16 · 데이터가 쌓이면 자동 활성화</span></div></div><div class="tab-content" id="tab_KoAct바이오_1w" style="display:none"><div class="no-change">아직 충분한 데이터가 없습니다<br><span class="muted" style="font-size:0.8rem">수집 시작: 2026-05-16 · 데이터가 쌓이면 자동 활성화</span></div></div><div class="tab-content" id="tab_KoAct바이오_1m" style="display:none"><div class="no-change">아직 충분한 데이터가 없습니다<br><span class="muted" style="font-size:0.8rem">수집 시작: 2026-05-16 · 데이터가 쌓이면 자동 활성화</span></div></div>
+          <div class="toggle-wrap">
+            <button onclick="toggle('full_KoAct바이오', 28)" id="btn_KoAct바이오" class="toggle-btn">
+              ▼ 전체 28종목 보기
+            </button>
+            <table id="full_KoAct바이오" class="full-table" style="display:none">
+              <tr><th>#</th><th>종목</th><th class="num">비중</th><th class="num">전일</th><th class="num">변화</th></tr>
+              <tr><td class="num muted">1</td><td><a href="https://finance.naver.com/item/main.nhn?code=141080" target="_blank" class="stock-link">리가켐바이오</a></td><td class="num bold">9.54%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">2</td><td><a href="https://finance.naver.com/item/main.nhn?code=196170" target="_blank" class="stock-link">알테오젠</a></td><td class="num bold">9.12%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">3</td><td><a href="https://finance.naver.com/item/main.nhn?code=226950" target="_blank" class="stock-link">올릭스</a></td><td class="num bold">8.87%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">4</td><td><a href="https://finance.naver.com/item/main.nhn?code=298380" target="_blank" class="stock-link">에이비엘바이오</a></td><td class="num bold">8.32%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">5</td><td><a href="https://finance.naver.com/item/main.nhn?code=068270" target="_blank" class="stock-link">셀트리온</a></td><td class="num bold">7.81%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">6</td><td><a href="https://finance.naver.com/item/main.nhn?code=237690" target="_blank" class="stock-link">에스티팜</a></td><td class="num bold">7.39%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">7</td><td><a href="https://finance.naver.com/item/main.nhn?code=476830" target="_blank" class="stock-link">알지노믹스</a></td><td class="num bold">6.20%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">8</td><td><a href="https://finance.naver.com/item/main.nhn?code=397030" target="_blank" class="stock-link">에이프릴바이오</a></td><td class="num bold">5.76%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">9</td><td><a href="https://finance.naver.com/item/main.nhn?code=310210" target="_blank" class="stock-link">보로노이</a></td><td class="num bold">3.96%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">10</td><td><a href="https://finance.naver.com/item/main.nhn?code=006280" target="_blank" class="stock-link">녹십자</a></td><td class="num bold">3.69%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">11</td><td><a href="https://finance.naver.com/item/main.nhn?code=128940" target="_blank" class="stock-link">한미약품</a></td><td class="num bold">3.67%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">12</td><td><a href="https://finance.naver.com/item/main.nhn?code=347850" target="_blank" class="stock-link">디앤디파마텍</a></td><td class="num bold">3.36%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">13</td><td><a href="https://finance.naver.com/item/main.nhn?code=009420" target="_blank" class="stock-link">한올바이오파마</a></td><td class="num bold">2.54%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">14</td><td><a href="https://finance.naver.com/item/main.nhn?code=039200" target="_blank" class="stock-link">오스코텍</a></td><td class="num bold">2.36%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">15</td><td><a href="https://finance.naver.com/item/main.nhn?code=214450" target="_blank" class="stock-link">파마리서치</a></td><td class="num bold">2.23%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">16</td><td><a href="https://finance.naver.com/item/main.nhn?code=389650" target="_blank" class="stock-link">넥스트바이오메디컬</a></td><td class="num bold">2.22%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">17</td><td><a href="https://finance.naver.com/item/main.nhn?code=458870" target="_blank" class="stock-link">씨어스</a></td><td class="num bold">1.95%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">18</td><td><a href="https://finance.naver.com/item/main.nhn?code=145020" target="_blank" class="stock-link">휴젤</a></td><td class="num bold">1.87%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">19</td><td><a href="https://finance.naver.com/item/main.nhn?code=174900" target="_blank" class="stock-link">앱클론</a></td><td class="num bold">1.85%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">20</td><td><a href="https://finance.naver.com/item/main.nhn?code=138610" target="_blank" class="stock-link">나이벡</a></td><td class="num bold">1.12%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">21</td><td><a href="https://finance.naver.com/item/main.nhn?code=389470" target="_blank" class="stock-link">인벤티지랩</a></td><td class="num bold">1.12%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">22</td><td><a href="https://finance.naver.com/item/main.nhn?code=024850" target="_blank" class="stock-link">HLB이노베이션</a></td><td class="num bold">1.10%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">23</td><td><a href="https://finance.naver.com/item/main.nhn?code=380550" target="_blank" class="stock-link">뉴로핏</a></td><td class="num bold">1.07%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">24</td><td><a href="https://finance.naver.com/item/main.nhn?code=456160" target="_blank" class="stock-link">지투지바이오</a></td><td class="num bold">0.73%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">25</td><td><a href="https://finance.naver.com/item/main.nhn?code=376900" target="_blank" class="stock-link">로킷헬스케어</a></td><td class="num bold">0.67%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">26</td><td><a href="https://finance.naver.com/item/main.nhn?code=207940" target="_blank" class="stock-link">삼성바이오로직스</a></td><td class="num bold">0.58%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">27</td><td><a href="https://finance.naver.com/item/main.nhn?code=042520" target="_blank" class="stock-link">한스바이오메드</a></td><td class="num bold">0.53%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">28</td><td><a href="https://finance.naver.com/item/main.nhn?code=249420" target="_blank" class="stock-link">일동제약</a></td><td class="num bold">0.37%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-header" style="border-top:3px solid #7e57c2">
+            <div class="panel-name" style="color:#7e57c2">KoAct 미국나스닥성장기업액티브</div>
+            <div class="panel-meta">삼성액티브자산운용 · 0015B0 · 운보수 0.50%</div>
+            <div class="panel-meta muted">42종목 보유 · 기준일: 2026-05-16</div>
+            <div class="panel-market">
+              <span class="mkt-item">🏦 AUM <strong>6,156억</strong></span>
+              <span class="mkt-sep">·</span>
+              <span class="mkt-item">📊 거래대금 <strong>352억</strong></span>
+            </div>
+          </div>
+          <div class="tab-bar" id="tabs_KoAct나스닥성장">
+            <button class="tab-btn active disabled" data-period="1d">전일 대비<span class="tab-date">데이터 없음</span></button><button class="tab-btn  disabled" data-period="1w">1주 전<span class="tab-date">데이터 없음</span></button><button class="tab-btn  disabled" data-period="1m">1개월 전<span class="tab-date">데이터 없음</span></button>
+          </div>
+          <div class="tab-content" id="tab_KoAct나스닥성장_1d" style="display:block"><div class="no-change">아직 충분한 데이터가 없습니다<br><span class="muted" style="font-size:0.8rem">수집 시작: 2026-05-16 · 데이터가 쌓이면 자동 활성화</span></div></div><div class="tab-content" id="tab_KoAct나스닥성장_1w" style="display:none"><div class="no-change">아직 충분한 데이터가 없습니다<br><span class="muted" style="font-size:0.8rem">수집 시작: 2026-05-16 · 데이터가 쌓이면 자동 활성화</span></div></div><div class="tab-content" id="tab_KoAct나스닥성장_1m" style="display:none"><div class="no-change">아직 충분한 데이터가 없습니다<br><span class="muted" style="font-size:0.8rem">수집 시작: 2026-05-16 · 데이터가 쌓이면 자동 활성화</span></div></div>
+          <div class="toggle-wrap">
+            <button onclick="toggle('full_KoAct나스닥성장', 42)" id="btn_KoAct나스닥성장" class="toggle-btn">
+              ▼ 전체 42종목 보기
+            </button>
+            <table id="full_KoAct나스닥성장" class="full-table" style="display:none">
+              <tr><th>#</th><th>종목</th><th class="num">비중</th><th class="num">전일</th><th class="num">변화</th></tr>
+              <tr><td class="num muted">1</td><td>NVIDIA Corp</td><td class="num bold">8.63%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">2</td><td>ALPHABET INC-CL A</td><td class="num bold">8.35%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">3</td><td>ADVANCED MICRO DEVICES</td><td class="num bold">7.55%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">4</td><td>INTEL Corp</td><td class="num bold">6.72%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">5</td><td>Sandisk Corp/DE</td><td class="num bold">6.28%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">6</td><td>Amazon.com Inc</td><td class="num bold">5.98%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">7</td><td>BLOOM ENERGY CORPORATION</td><td class="num bold">4.66%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">8</td><td>MICRON TECH</td><td class="num bold">4.15%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">9</td><td>BROADCOM LTD</td><td class="num bold">4.11%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">10</td><td>TESLA MOTORS</td><td class="num bold">3.71%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">11</td><td>SEAGATE TECHNOLOGY</td><td class="num bold">3.27%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">12</td><td>APPLE Inc</td><td class="num bold">3.24%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">13</td><td>WESTERN DIGITAL</td><td class="num bold">3.16%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">14</td><td>Lumentum Holdings Inc</td><td class="num bold">3.13%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">15</td><td>Circle Internet Group Inc</td><td class="num bold">2.62%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">16</td><td>COINBASE GLOBAL INC -CLASS A</td><td class="num bold">2.19%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">17</td><td>MICROSOFT</td><td class="num bold">2.14%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">18</td><td>COHERENT CORP</td><td class="num bold">1.70%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">19</td><td>ARM Holdings PLC</td><td class="num bold">1.51%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">20</td><td>MARVELL TECHNOLOGY INC</td><td class="num bold">1.29%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">21</td><td>Astera Labs Inc</td><td class="num bold">1.21%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">22</td><td>YANDEX NV-A</td><td class="num bold">1.04%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">23</td><td>ELI LILLY & CO</td><td class="num bold">0.93%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">24</td><td>PALO ALTO NETWORKS INC</td><td class="num bold">0.91%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">25</td><td>CISCO SYSTEMS INC</td><td class="num bold">0.89%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">26</td><td>Ciena Corp</td><td class="num bold">0.89%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">27</td><td>COSTCO WHOLESALE CORP</td><td class="num bold">0.87%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">28</td><td>APPLIED MATERIALS INC</td><td class="num bold">0.86%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">29</td><td>GILEAD SCIENCES INC</td><td class="num bold">0.84%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">30</td><td>STMICROELECTRONICS NV-NY SHS</td><td class="num bold">0.82%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">31</td><td>CROWDSTRIKE HOLDINGS INC - A</td><td class="num bold">0.77%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">32</td><td>QUALCOMM Inc</td><td class="num bold">0.77%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">33</td><td>TEXAS INSTRUMENTS</td><td class="num bold">0.69%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">34</td><td>Palantir Technologies Inc -A</td><td class="num bold">0.67%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">35</td><td>LAM RESEARCH</td><td class="num bold">0.64%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">36</td><td>Vertiv Holdings Co</td><td class="num bold">0.63%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">37</td><td>Silicon Motion Technology Corp</td><td class="num bold">0.55%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">38</td><td>Tower Semiconductor Ltd</td><td class="num bold">0.50%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">39</td><td>Vicor Corp</td><td class="num bold">0.35%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">40</td><td>AppLovin Corp</td><td class="num bold">0.33%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">41</td><td>TAIWAN SEMICONDUCTOR-SP ADR</td><td class="num bold">0.24%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+<tr><td class="num muted">42</td><td>GE Vernova LLC</td><td class="num bold">0.18%</td><td class="num muted">—</td><td class="num green bold">NEW</td></tr>
+            </table>
+          </div>
+        </div>
   </div>
   <p class="source">
-    📡 출처: <a href="https://timeetf.co.kr/m11_view.php?idx=24" target="_blank">TIME 코스닥액티브</a> · <a href="https://www.samsungactive.co.kr/etf/view.do?id=2ETFU6" target="_blank">KoAct 코스닥액티브</a> · <a href="https://www.samsungfund.com/etf/product/view.do?id=2ETFE5" target="_blank">KODEX 신재생에너지액티브</a> · <a href="https://timeetf.co.kr/m11_view.php?idx=6" target="_blank">TIME 글로벌AI인공지능액티브</a> · <a href="https://www.samsungfund.com/etf/product/view.do?id=2ETFH5" target="_blank">KODEX 로봇액티브</a><br>
+    📡 출처: <a href="https://timeetf.co.kr/m11_view.php?idx=24" target="_blank">TIME 코스닥액티브</a> · <a href="https://www.samsungactive.co.kr/etf/view.do?id=2ETFU6" target="_blank">KoAct 코스닥액티브</a> · <a href="https://www.samsungfund.com/etf/product/view.do?id=2ETFE5" target="_blank">KODEX 신재생에너지액티브</a> · <a href="https://timeetf.co.kr/m11_view.php?idx=6" target="_blank">TIME 글로벌AI인공지능액티브</a> · <a href="https://www.samsungfund.com/etf/product/view.do?id=2ETFH5" target="_blank">KODEX 로봇액티브</a> · <a href="https://www.samsungactive.co.kr/etf/view.do?id=2ETFJ9" target="_blank">KoAct 바이오헬스케어액티브</a> · <a href="https://www.samsungactive.co.kr/etf/view.do?id=2ETFQ1" target="_blank">KoAct 미국나스닥성장기업액티브</a><br>
     ⚠️ 액티브 ETF는 익일 공시 원칙 (T+1). 비중은 전일 종가 기준.
   </p>
 </div>

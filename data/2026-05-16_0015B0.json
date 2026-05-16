@@ -1,0 +1,218 @@
+{
+  "date": "2026-05-16",
+  "etf": "KoAct나스닥성장",
+  "code": "0015B0",
+  "fetched_at": "2026-05-16T11:26:46.909349",
+  "holdings": [
+    {
+      "name": "NVIDIA Corp",
+      "code": "NVDA US Equity",
+      "weight": 8.63
+    },
+    {
+      "name": "ALPHABET INC-CL A",
+      "code": "GOOGL US Equity",
+      "weight": 8.35
+    },
+    {
+      "name": "ADVANCED MICRO DEVICES",
+      "code": "AMD US Equity",
+      "weight": 7.55
+    },
+    {
+      "name": "INTEL Corp",
+      "code": "INTC US Equity",
+      "weight": 6.72
+    },
+    {
+      "name": "Sandisk Corp/DE",
+      "code": "SNDK US Equity",
+      "weight": 6.28
+    },
+    {
+      "name": "Amazon.com Inc",
+      "code": "AMZN US Equity",
+      "weight": 5.98
+    },
+    {
+      "name": "BLOOM ENERGY CORPORATION",
+      "code": "BE US Equity",
+      "weight": 4.66
+    },
+    {
+      "name": "MICRON TECH",
+      "code": "MU US Equity",
+      "weight": 4.15
+    },
+    {
+      "name": "BROADCOM LTD",
+      "code": "AVGO US Equity",
+      "weight": 4.11
+    },
+    {
+      "name": "TESLA MOTORS",
+      "code": "TSLA US Equity",
+      "weight": 3.71
+    },
+    {
+      "name": "SEAGATE TECHNOLOGY",
+      "code": "STX US Equity",
+      "weight": 3.27
+    },
+    {
+      "name": "APPLE Inc",
+      "code": "AAPL US Equity",
+      "weight": 3.24
+    },
+    {
+      "name": "WESTERN DIGITAL",
+      "code": "WDC US Equity",
+      "weight": 3.16
+    },
+    {
+      "name": "Lumentum Holdings Inc",
+      "code": "LITE US Equity",
+      "weight": 3.13
+    },
+    {
+      "name": "Circle Internet Group Inc",
+      "code": "CRCL US Equity",
+      "weight": 2.62
+    },
+    {
+      "name": "COINBASE GLOBAL INC -CLASS A",
+      "code": "COIN US Equity",
+      "weight": 2.19
+    },
+    {
+      "name": "MICROSOFT",
+      "code": "MSFT US Equity",
+      "weight": 2.14
+    },
+    {
+      "name": "COHERENT CORP",
+      "code": "COHR US Equity",
+      "weight": 1.7
+    },
+    {
+      "name": "ARM Holdings PLC",
+      "code": "ARM US Equity",
+      "weight": 1.51
+    },
+    {
+      "name": "MARVELL TECHNOLOGY INC",
+      "code": "MRVL US Equity",
+      "weight": 1.29
+    },
+    {
+      "name": "Astera Labs Inc",
+      "code": "ALAB US Equity",
+      "weight": 1.21
+    },
+    {
+      "name": "YANDEX NV-A",
+      "code": "NBIS US Equity",
+      "weight": 1.04
+    },
+    {
+      "name": "ELI LILLY & CO",
+      "code": "LLY US Equity",
+      "weight": 0.93
+    },
+    {
+      "name": "PALO ALTO NETWORKS INC",
+      "code": "PANW US Equity",
+      "weight": 0.91
+    },
+    {
+      "name": "CISCO SYSTEMS INC",
+      "code": "CSCO US Equity",
+      "weight": 0.89
+    },
+    {
+      "name": "Ciena Corp",
+      "code": "CIEN US Equity",
+      "weight": 0.89
+    },
+    {
+      "name": "COSTCO WHOLESALE CORP",
+      "code": "COST US Equity",
+      "weight": 0.87
+    },
+    {
+      "name": "APPLIED MATERIALS INC",
+      "code": "AMAT US Equity",
+      "weight": 0.86
+    },
+    {
+      "name": "GILEAD SCIENCES INC",
+      "code": "GILD US Equity",
+      "weight": 0.84
+    },
+    {
+      "name": "STMICROELECTRONICS NV-NY SHS",
+      "code": "STM US Equity",
+      "weight": 0.82
+    },
+    {
+      "name": "CROWDSTRIKE HOLDINGS INC - A",
+      "code": "CRWD US Equity",
+      "weight": 0.77
+    },
+    {
+      "name": "QUALCOMM Inc",
+      "code": "QCOM US Equity",
+      "weight": 0.77
+    },
+    {
+      "name": "TEXAS INSTRUMENTS",
+      "code": "TXN US Equity",
+      "weight": 0.69
+    },
+    {
+      "name": "Palantir Technologies Inc -A",
+      "code": "PLTR US Equity",
+      "weight": 0.67
+    },
+    {
+      "name": "LAM RESEARCH",
+      "code": "LRCX US Equity",
+      "weight": 0.64
+    },
+    {
+      "name": "Vertiv Holdings Co",
+      "code": "VRT US Equity",
+      "weight": 0.63
+    },
+    {
+      "name": "Silicon Motion Technology Corp",
+      "code": "SIMO US Equity",
+      "weight": 0.55
+    },
+    {
+      "name": "Tower Semiconductor Ltd",
+      "code": "TSEM US Equity",
+      "weight": 0.5
+    },
+    {
+      "name": "Vicor Corp",
+      "code": "VICR US Equity",
+      "weight": 0.35
+    },
+    {
+      "name": "AppLovin Corp",
+      "code": "APP US Equity",
+      "weight": 0.33
+    },
+    {
+      "name": "TAIWAN SEMICONDUCTOR-SP ADR",
+      "code": "TSM US Equity",
+      "weight": 0.24
+    },
+    {
+      "name": "GE Vernova LLC",
+      "code": "GEV US Equity",
+      "weight": 0.18
+    }
+  ]
+}
