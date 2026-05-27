@@ -13,6 +13,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
 
       - uses: actions/setup-python@v5
         with:
@@ -24,14 +26,26 @@ jobs:
       - name: Run ETF tracker
         run: python kosdaq_etf_tracker.py
 
-      - name: Commit updated data
+      - name: Commit and push (with retry)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/ kosdaq_etf_report.html
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            git commit -m "chore: daily ETF snapshot $(date -u +%Y-%m-%d)"
-            git push
+            exit 0
           fi
+          git commit -m "chore: daily ETF snapshot $(date -u +%Y-%m-%d)"
+
+          # 최대 5회 재시도: pull --rebase로 동시 push 대응 + 서버 일시오류 재시도
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "Push attempt $i failed, syncing and retrying..."
+            sleep $((i * 10))
+            git pull --rebase -X theirs origin main || true
+          done
+          echo "Push failed after 5 attempts"
+          exit 1
