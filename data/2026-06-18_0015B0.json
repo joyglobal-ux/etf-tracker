@@ -1,0 +1,288 @@
+{
+  "date": "2026-06-18",
+  "etf": "KoAct나스닥성장",
+  "code": "0015B0",
+  "fetched_at": "2026-06-18T12:36:55.075586",
+  "holdings": [
+    {
+      "name": "Space Exploration Technologies Corp",
+      "code": "SPCX US Equity",
+      "weight": 9.85
+    },
+    {
+      "name": "ARM Holdings PLC",
+      "code": "ARM US Equity",
+      "weight": 6.88
+    },
+    {
+      "name": "ADVANCED MICRO DEVICES",
+      "code": "AMD US Equity",
+      "weight": 6.74
+    },
+    {
+      "name": "Sandisk Corp/DE",
+      "code": "SNDK US Equity",
+      "weight": 5.48
+    },
+    {
+      "name": "INTEL Corp",
+      "code": "INTC US Equity",
+      "weight": 5.32
+    },
+    {
+      "name": "NVIDIA Corp",
+      "code": "NVDA US Equity",
+      "weight": 4.68
+    },
+    {
+      "name": "ALPHABET INC-CL A",
+      "code": "GOOGL US Equity",
+      "weight": 4.64
+    },
+    {
+      "name": "MICRON TECH",
+      "code": "MU US Equity",
+      "weight": 4.46
+    },
+    {
+      "name": "BLOOM ENERGY CORPORATION",
+      "code": "BE US Equity",
+      "weight": 4.19
+    },
+    {
+      "name": "Amazon.com Inc",
+      "code": "AMZN US Equity",
+      "weight": 3.62
+    },
+    {
+      "name": "Dell Technologies Inc",
+      "code": "DELL US Equity",
+      "weight": 3.53
+    },
+    {
+      "name": "MARVELL TECHNOLOGY INC",
+      "code": "MRVL US Equity",
+      "weight": 3.11
+    },
+    {
+      "name": "WESTERN DIGITAL",
+      "code": "WDC US Equity",
+      "weight": 3.01
+    },
+    {
+      "name": "APPLE Inc",
+      "code": "AAPL US Equity",
+      "weight": 2.8
+    },
+    {
+      "name": "SEAGATE TECHNOLOGY",
+      "code": "STX US Equity",
+      "weight": 2.78
+    },
+    {
+      "name": "LAM RESEARCH",
+      "code": "LRCX US Equity",
+      "weight": 2.39
+    },
+    {
+      "name": "YANDEX NV-A",
+      "code": "NBIS US Equity",
+      "weight": 2.22
+    },
+    {
+      "name": "MICROSOFT",
+      "code": "MSFT US Equity",
+      "weight": 2.21
+    },
+    {
+      "name": "TESLA MOTORS",
+      "code": "TSLA US Equity",
+      "weight": 2.2
+    },
+    {
+      "name": "Snowflake Inc   - CL A",
+      "code": "SNOW US Equity",
+      "weight": 1.8
+    },
+    {
+      "name": "Lumentum Holdings Inc",
+      "code": "LITE US Equity",
+      "weight": 1.57
+    },
+    {
+      "name": "APPLIED MATERIALS INC",
+      "code": "AMAT US Equity",
+      "weight": 1.46
+    },
+    {
+      "name": "BROADCOM LTD",
+      "code": "AVGO US Equity",
+      "weight": 1.38
+    },
+    {
+      "name": "CISCO SYSTEMS INC",
+      "code": "CSCO US Equity",
+      "weight": 0.97
+    },
+    {
+      "name": "Rocket Lab USA Inc",
+      "code": "RKLB US Equity",
+      "weight": 0.9
+    },
+    {
+      "name": "STMICROELECTRONICS NV-NY SHS",
+      "code": "STM US Equity",
+      "weight": 0.89
+    },
+    {
+      "name": "ASML HOLDING",
+      "code": "ASML US Equity",
+      "weight": 0.89
+    },
+    {
+      "name": "COINBASE GLOBAL INC -CLASS A",
+      "code": "COIN US Equity",
+      "weight": 0.88
+    },
+    {
+      "name": "Circle Internet Group Inc",
+      "code": "CRCL US Equity",
+      "weight": 0.87
+    },
+    {
+      "name": "Palantir Technologies Inc -A",
+      "code": "PLTR US Equity",
+      "weight": 0.66
+    },
+    {
+      "name": "TEXAS INSTRUMENTS",
+      "code": "TXN US Equity",
+      "weight": 0.64
+    },
+    {
+      "name": "KLA Corp",
+      "code": "KLAC US Equity",
+      "weight": 0.58
+    },
+    {
+      "name": "PALO ALTO NETWORKS INC",
+      "code": "PANW US Equity",
+      "weight": 0.54
+    },
+    {
+      "name": "Silicon Motion Technology Corp",
+      "code": "SIMO US Equity",
+      "weight": 0.53
+    },
+    {
+      "name": "QUALCOMM Inc",
+      "code": "QCOM US Equity",
+      "weight": 0.53
+    },
+    {
+      "name": "Vertiv Holdings Co",
+      "code": "VRT US Equity",
+      "weight": 0.47
+    },
+    {
+      "name": "ANALOG DEVICES",
+      "code": "ADI US Equity",
+      "weight": 0.47
+    },
+    {
+      "name": "Tower Semiconductor Ltd",
+      "code": "TSEM US Equity",
+      "weight": 0.46
+    },
+    {
+      "name": "CROWDSTRIKE HOLDINGS INC - A",
+      "code": "CRWD US Equity",
+      "weight": 0.44
+    },
+    {
+      "name": "TERADYNE INC",
+      "code": "TER US Equity",
+      "weight": 0.35
+    },
+    {
+      "name": "GILEAD SCIENCES INC",
+      "code": "GILD US Equity",
+      "weight": 0.29
+    },
+    {
+      "name": "FORTINET INC",
+      "code": "FTNT US Equity",
+      "weight": 0.29
+    },
+    {
+      "name": "Ciena Corp",
+      "code": "CIEN US Equity",
+      "weight": 0.28
+    },
+    {
+      "name": "COHERENT CORP",
+      "code": "COHR US Equity",
+      "weight": 0.21
+    },
+    {
+      "name": "DATADOG INC - CLASS A",
+      "code": "DDOG US Equity",
+      "weight": 0.2
+    },
+    {
+      "name": "MONOLITHIC POWER SYSTEMS INC",
+      "code": "MPWR US Equity",
+      "weight": 0.19
+    },
+    {
+      "name": "Astera Labs Inc",
+      "code": "ALAB US Equity",
+      "weight": 0.18
+    },
+    {
+      "name": "NXP SEMICONDUCTORS NV",
+      "code": "NXPI US Equity",
+      "weight": 0.15
+    },
+    {
+      "name": "Robinhood Markets Inc",
+      "code": "HOOD US Equity",
+      "weight": 0.13
+    },
+    {
+      "name": "Flextronics International Ltd",
+      "code": "FLEX US Equity",
+      "weight": 0.11
+    },
+    {
+      "name": "GLOBALFOUNDRIES Inc",
+      "code": "GFS US Equity",
+      "weight": 0.11
+    },
+    {
+      "name": "MICROCHIP TECHNOLOGY INC",
+      "code": "MCHP US Equity",
+      "weight": 0.11
+    },
+    {
+      "name": "Coreweave Inc",
+      "code": "CRWV US Equity",
+      "weight": 0.1
+    },
+    {
+      "name": "ON SEMICONDUCTOR",
+      "code": "ON US Equity",
+      "weight": 0.1
+    },
+    {
+      "name": "Credo Technology Group Holding Ltd",
+      "code": "CRDO US Equity",
+      "weight": 0.09
+    },
+    {
+      "name": "FIRST SOLAR INC",
+      "code": "FSLR US Equity",
+      "weight": 0.07
+    }
+  ]
+}
