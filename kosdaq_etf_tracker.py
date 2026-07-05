@@ -19,6 +19,7 @@ import os
 import sys
 import re
 import io
+import csv
 import time
 import zipfile
 import argparse
@@ -39,6 +40,26 @@ except ImportError:
 # ─────────────────────────────────────────
 
 ETF_CONFIG = {
+    "LAZR": {
+        "code": "LAZR",
+        "name": "Tema 포토닉스·옵티컬 (LAZR)",
+        "manager": "Tema ETFs × SemiAnalysis",
+        "fee": "0.75%",
+        "color": "#f06292",
+        "source": "tema",
+        "csv_url": "https://temaetfs.com/hubfs/Website/Holdings/LAZR-holdings.csv",
+        "disclosure_url": "https://temaetfs.com/lazr",
+    },
+    "DISK": {
+        "code": "DISK",
+        "name": "Tema 메모리 (DISK)",
+        "manager": "Tema ETFs × SemiAnalysis",
+        "fee": "0.75%",
+        "color": "#26a69a",
+        "source": "tema",
+        "csv_url": "https://temaetfs.com/hubfs/Website/Holdings/DISK-holdings.csv",
+        "disclosure_url": "https://temaetfs.com/disk",
+    },
     "TIME": {
         "code": "0162Y0",
         "isin": "KR70162Y0008",
@@ -274,6 +295,50 @@ def fetch_samsung_api(date_str: str, api_base: str, fid: str, referer: str) -> l
 
 
 # ─────────────────────────────────────────
+# 데이터 수집 — Tema ETF (temaetfs.com, 미국 상장)
+# ─────────────────────────────────────────
+
+TEMA_META: dict = {}   # etf_key → {"aum_usd": int, "as_of": "YYYY-MM-DD"}
+
+
+def fetch_tema_csv(etf_key: str) -> list[dict]:
+    """Tema ETF 홀딩스 CSV — 현금 포함 전체 구성. AUM은 market_value 합산."""
+    cfg = ETF_CONFIG[etf_key]
+    try:
+        resp = requests.get(cfg["csv_url"], headers=HEADERS, timeout=20)
+        if resp.status_code != 200 or len(resp.content) < 100:
+            log.debug(f"  tema CSV ({etf_key}): HTTP {resp.status_code}")
+            return []
+        rows = list(csv.DictReader(io.StringIO(resp.content.decode("utf-8-sig"))))
+        holdings, aum, as_of = [], 0.0, None
+        for r in rows:
+            as_of = (r.get("holdings_date") or "").strip() or as_of
+            name = (r.get("proper_name") or "").strip()
+            try:
+                mv = float(r.get("market_value") or 0)
+                weight = float(r.get("percent_of_nav") or 0) * 100
+            except ValueError:
+                continue
+            aum += mv
+            if name and weight != 0:
+                holdings.append({
+                    "name": name,
+                    "code": (r.get("ticker") or "").strip(),
+                    "weight": round(weight, 2),
+                })
+        if holdings:
+            TEMA_META[etf_key] = {"aum_usd": round(aum), "as_of": as_of}
+            log.info(
+                f"  ✅ Tema CSV {etf_key} (보유기준일 {as_of}): "
+                f"{len(holdings)}종목 · AUM ${aum:,.0f}"
+            )
+        return sorted(holdings, key=lambda x: x["weight"], reverse=True)
+    except Exception as e:
+        log.debug(f"  tema CSV failed ({etf_key}): {e}")
+        return []
+
+
+# ─────────────────────────────────────────
 # 시장 데이터 — AUM / 거래대금 (Naver Finance)
 # ─────────────────────────────────────────
 
@@ -304,6 +369,17 @@ def _fmt_억(won) -> str:
     return f"{억:,}억"
 
 
+def _fmt_usd(v) -> str:
+    """USD 금액 포맷. 예: 5108000 → '$5.1M'"""
+    if v is None:
+        return "—"
+    if v >= 1_000_000_000:
+        return f"${v/1_000_000_000:.2f}B"
+    if v >= 1_000_000:
+        return f"${v/1_000_000:.1f}M"
+    return f"${v/1_000:.0f}K"
+
+
 # ─────────────────────────────────────────
 # 통합 수집 (날짜 자동 후퇴)
 # ─────────────────────────────────────────
@@ -328,6 +404,9 @@ def fetch_holdings(etf_key: str, date_str: str = None) -> list[dict]:
     candidates = _prev_weekdays(target, n=5)
 
     source = cfg.get("source")
+    if source == "tema":
+        # Tema는 항상 최신 CSV 하나만 제공 (날짜 후퇴 불필요)
+        return fetch_tema_csv(etf_key)
     if source == "timeetf":
         idx = cfg.get("source_idx", 24)
         for d in candidates:
@@ -376,6 +455,26 @@ def load_holdings(etf_key: str, date_str: str) -> list:
         return []
     with open(path, encoding="utf-8") as f:
         return json.load(f).get("holdings", [])
+
+
+def save_market(etf_key: str, date_str: str, market: dict):
+    """당일 스냅샷 JSON에 시장 데이터(AUM 등)를 병합 저장 — AUM 히스토리 축적용"""
+    path = data_path(etf_key, date_str)
+    if not path.exists() or not market:
+        return
+    with open(path, encoding="utf-8") as f:
+        payload = json.load(f)
+    payload["market"] = market
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+
+
+def load_market(etf_key: str, date_str: str) -> dict:
+    path = data_path(etf_key, date_str)
+    if not path.exists():
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f).get("market", {}) or {}
 
 
 def get_prev_date(etf_key: str, before: str) -> Optional[str]:
@@ -459,6 +558,23 @@ def diff_holdings(prev: list, curr: list) -> dict:
 # HTML 생성
 # ─────────────────────────────────────────
 
+def _stock_link(name: str, code: str) -> str:
+    """종목코드 형태에 따라 시세 링크 생성: 한국 6자리→네이버, 미국 티커→stockanalysis"""
+    code = (code or "").strip()
+    m_kr = re.match(r"^(\d{6})(?:\s+KS)?$", code)
+    if m_kr:
+        return (
+            f'<a href="https://finance.naver.com/item/main.nhn?code={m_kr.group(1)}" '
+            f'target="_blank" class="stock-link">{name}</a>'
+        )
+    if re.match(r"^[A-Z][A-Z.]{0,5}$", code):
+        return (
+            f'<a href="https://stockanalysis.com/stocks/{code}/" '
+            f'target="_blank" class="stock-link">{name}</a>'
+        )
+    return name
+
+
 def _rows(items, style):
     if not items:
         return '<tr><td colspan="4" class="empty">없음</td></tr>'
@@ -469,12 +585,7 @@ def _rows(items, style):
         code = h.get("code", "")
         prev_w = h.get("prev_weight")
         delta = h.get("delta")
-        code_link = (
-            f'<a href="https://finance.naver.com/item/main.nhn?code={code}" '
-            f'target="_blank" class="stock-link">{name}</a>'
-            if re.match(r"^\d{6}$", code or "")
-            else name
-        )
+        code_link = _stock_link(name, code)
         if style == "new":
             rows.append(
                 f'<tr class="row-new"><td><span class="badge new">NEW</span>{code_link}</td>'
@@ -511,12 +622,7 @@ def _full_rows(curr, prev_map):
         name = h.get("name", "")
         prev = prev_map.get(name, {})
         pw = prev.get("weight")
-        code_link = (
-            f'<a href="https://finance.naver.com/item/main.nhn?code={code}" '
-            f'target="_blank" class="stock-link">{name}</a>'
-            if re.match(r"^\d{6}$", code or "")
-            else name
-        )
+        code_link = _stock_link(name, code)
         if pw is not None:
             delta = w - pw
             d_str = f"+{delta:.2f}%" if delta > 0 else f"{delta:.2f}%"
@@ -568,6 +674,38 @@ def _build_diff_sections(diff: dict) -> str:
     if not any([diff["new"], diff["removed"], diff["increased"], diff["decreased"]]):
         sections.append('<div class="no-change">변화 없음</div>')
     return "".join(sections)
+
+
+def _build_digest(results: dict) -> str:
+    """상단 시그널 요약 — 전일 대비 신규 진입/완전 청산만 모아서 표시"""
+    rows = []
+    for etf_key, data in results.items():
+        diff = (data.get("periods") or {}).get("1d", {}).get("diff")
+        if not diff:
+            continue
+        cfg = ETF_CONFIG[etf_key]
+        chips = []
+        for h in diff["new"]:
+            chips.append(
+                f'<span class="sig s-new">NEW {h["name"]} {h["weight"]:.1f}%</span>'
+            )
+        for h in diff["removed"]:
+            chips.append(f'<span class="sig s-out">OUT {h["name"]}</span>')
+        if chips:
+            rows.append(
+                f'<div class="sig-row"><span class="sig-etf" '
+                f'style="color:{cfg["color"]}">{cfg["name"]}</span>{"".join(chips)}</div>'
+            )
+    if not rows:
+        return (
+            '<div class="digest"><div class="digest-title">🔔 오늘의 시그널</div>'
+            '<div class="sig-none">전일 대비 신규 진입 · 완전 청산 없음</div></div>'
+        )
+    return (
+        '<div class="digest"><div class="digest-title">🔔 오늘의 시그널 '
+        '<span class="digest-sub">전일 대비 신규 진입 / 완전 청산</span></div>'
+        + "".join(rows) + "</div>"
+    )
 
 
 def generate_html(results: dict, today: str) -> Path:
@@ -633,6 +771,20 @@ def generate_html(results: dict, today: str) -> Path:
         prev_map = {h["name"]: h for h in default_prev}
         full_rows = _full_rows(curr, prev_map)
 
+        # 시장 정보 라인 (국내: AUM원화+거래대금 / Tema: AUM달러+보유기준일)
+        if cfg.get("source") == "tema":
+            market_html = (
+                f'<span class="mkt-item">🏦 AUM <strong>{_fmt_usd(market.get("aum_usd"))}</strong></span>'
+                f'<span class="mkt-sep">·</span>'
+                f'<span class="mkt-item">📅 보유 기준일 <strong>{market.get("as_of") or "—"}</strong></span>'
+            )
+        else:
+            market_html = (
+                f'<span class="mkt-item">🏦 AUM <strong>{_fmt_억(market.get("aum"))}</strong></span>'
+                f'<span class="mkt-sep">·</span>'
+                f'<span class="mkt-item">📊 거래대금 <strong>{_fmt_억(market.get("trading_value"))}</strong></span>'
+            )
+
         panel = f"""
         <div class="panel">
           <div class="panel-header" style="border-top:3px solid {cfg['color']}">
@@ -640,9 +792,7 @@ def generate_html(results: dict, today: str) -> Path:
             <div class="panel-meta">{cfg['manager']} · {cfg['code']} · 운보수 {cfg['fee']}</div>
             <div class="panel-meta muted">{len(curr)}종목 보유 · 기준일: {today}</div>
             <div class="panel-market">
-              <span class="mkt-item">🏦 AUM <strong>{_fmt_억(market.get('aum'))}</strong></span>
-              <span class="mkt-sep">·</span>
-              <span class="mkt-item">📊 거래대금 <strong>{_fmt_억(market.get('trading_value'))}</strong></span>
+              {market_html}
             </div>
           </div>
           <div class="tab-bar" id="tabs_{etf_key}">
@@ -666,7 +816,7 @@ def generate_html(results: dict, today: str) -> Path:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>코스닥 액티브 ETF 트래커 — {today}</title>
+<title>액티브 ETF 트래커 — {today}</title>
 <style>
 *{{margin:0;padding:0;box-sizing:border-box}}
 body{{background:#0d0d1a;color:#e0e0e0;font-family:'Apple SD Gothic Neo','Pretendard',sans-serif;line-height:1.7;padding:20px}}
@@ -730,18 +880,29 @@ tr:hover td{{background:#1a1a40}}
 .source a{{color:#3498db}}
 .refresh-hint{{text-align:center;background:#12122a;border-radius:8px;padding:12px;margin-bottom:20px;font-size:0.82rem;color:#888}}
 .refresh-hint code{{background:#1e1e3a;padding:2px 6px;border-radius:3px;color:#7ecfff;font-size:0.78rem}}
+.backlink{{display:inline-block;font-size:0.8rem;color:#888;font-weight:600;text-decoration:none;margin-bottom:4px}}
+.backlink:hover{{color:#8b9bff}}
+.digest{{background:#12122a;border:1px solid #2d2d4e;border-radius:12px;padding:16px 20px;margin-top:20px}}
+.digest-title{{font-size:0.95rem;font-weight:800;color:#fff;margin-bottom:10px}}
+.digest-sub{{font-size:0.75rem;font-weight:400;color:#666;margin-left:8px}}
+.sig-row{{display:flex;align-items:center;flex-wrap:wrap;gap:6px;padding:5px 0;border-bottom:1px solid #1a1a35}}
+.sig-row:last-child{{border-bottom:none}}
+.sig-etf{{font-size:0.82rem;font-weight:700;margin-right:6px;min-width:150px}}
+.sig{{padding:2px 9px;border-radius:20px;font-size:0.75rem;font-weight:700}}
+.s-new{{background:#1e4d2b;color:#4caf80}}
+.s-out{{background:#4d1e1e;color:#ef5350}}
+.sig-none{{color:#555;font-size:0.85rem;font-style:italic}}
 </style>
 </head>
 <body>
 <div class="container">
+  <a class="backlink" href="/">← Polaris 허브</a>
   <h1>📊 액티브 ETF 트래커</h1>
-  <p class="subtitle">{" · ".join(f'{c["name"]} ({c["code"]})' for c in ETF_CONFIG.values())}</p>
+  <p class="subtitle">국내 액티브 {sum(1 for c in ETF_CONFIG.values() if c.get("source") != "tema")}종
+    · Tema×SemiAnalysis {sum(1 for c in ETF_CONFIG.values() if c.get("source") == "tema")}종
+    — 보유종목 스냅샷과 신규/청산/비중 변화 추적</p>
   <p class="subtitle">기준일: <strong style="color:#fff">{today}</strong></p>
-  <div class="refresh-hint">
-    🔄 매일 오후 6시 이후: <code>python3 kosdaq_etf_tracker.py</code>
-    &nbsp;·&nbsp; 특정일: <code>python3 kosdaq_etf_tracker.py --date 2026-03-28</code>
-    &nbsp;·&nbsp; 강제 재수집: <code>python3 kosdaq_etf_tracker.py --force</code>
-  </div>
+  {_build_digest(results)}
   <div class="grid">
     {"".join(panels_html)}
   </div>
@@ -835,10 +996,16 @@ def run(target_date: str = None, force_fetch: bool = False):
             else:
                 log.info(f"  ℹ️  {plabel}: 비교 데이터 없음")
 
-        # 시장 데이터 (AUM, 거래대금)
-        market = fetch_market_data(cfg["code"])
-        if market.get("aum"):
-            log.info(f"  💰 AUM: {_fmt_억(market['aum'])} · 거래대금: {_fmt_억(market['trading_value'])}")
+        # 시장 데이터 (AUM, 거래대금) — 당일 스냅샷 JSON에도 저장해 히스토리 축적
+        if cfg.get("source") == "tema":
+            market = TEMA_META.get(etf_key) or load_market(etf_key, today)
+            if market.get("aum_usd"):
+                log.info(f"  💰 AUM: {_fmt_usd(market['aum_usd'])} (보유기준일 {market.get('as_of')})")
+        else:
+            market = fetch_market_data(cfg["code"])
+            if market.get("aum"):
+                log.info(f"  💰 AUM: {_fmt_억(market['aum'])} · 거래대금: {_fmt_억(market['trading_value'])}")
+        save_market(etf_key, today, market)
 
         results[etf_key] = {"curr": curr, "periods": periods_data, "market": market}
 
