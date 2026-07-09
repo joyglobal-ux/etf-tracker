@@ -1,0 +1,302 @@
+{
+  "date": "2026-07-09",
+  "etf": "KoAct나스닥성장",
+  "code": "0015B0",
+  "fetched_at": "2026-07-09T12:19:16.876774",
+  "holdings": [
+    {
+      "name": "ADVANCED MICRO DEVICES",
+      "code": "AMD US Equity",
+      "weight": 7.34
+    },
+    {
+      "name": "INTEL Corp",
+      "code": "INTC US Equity",
+      "weight": 5.99
+    },
+    {
+      "name": "MICRON TECH",
+      "code": "MU US Equity",
+      "weight": 5.38
+    },
+    {
+      "name": "Sandisk Corp/DE",
+      "code": "SNDK US Equity",
+      "weight": 5.37
+    },
+    {
+      "name": "ALPHABET INC-CL A",
+      "code": "GOOGL US Equity",
+      "weight": 4.3
+    },
+    {
+      "name": "NVIDIA Corp",
+      "code": "NVDA US Equity",
+      "weight": 4.19
+    },
+    {
+      "name": "Snowflake Inc   - CL A",
+      "code": "SNOW US Equity",
+      "weight": 4.01
+    },
+    {
+      "name": "BLOOM ENERGY CORPORATION",
+      "code": "BE US Equity",
+      "weight": 3.92
+    },
+    {
+      "name": "ARM Holdings PLC",
+      "code": "ARM US Equity",
+      "weight": 3.54
+    },
+    {
+      "name": "TESLA MOTORS",
+      "code": "TSLA US Equity",
+      "weight": 3.51
+    },
+    {
+      "name": "LAM RESEARCH",
+      "code": "LRCX US Equity",
+      "weight": 3.41
+    },
+    {
+      "name": "Amazon.com Inc",
+      "code": "AMZN US Equity",
+      "weight": 3.41
+    },
+    {
+      "name": "APPLIED MATERIALS INC",
+      "code": "AMAT US Equity",
+      "weight": 3.29
+    },
+    {
+      "name": "APPLE Inc",
+      "code": "AAPL US Equity",
+      "weight": 3.26
+    },
+    {
+      "name": "MARVELL TECHNOLOGY INC",
+      "code": "MRVL US Equity",
+      "weight": 2.82
+    },
+    {
+      "name": "WESTERN DIGITAL",
+      "code": "WDC US Equity",
+      "weight": 2.7
+    },
+    {
+      "name": "SEAGATE TECHNOLOGY",
+      "code": "STX US Equity",
+      "weight": 2.57
+    },
+    {
+      "name": "DATADOG INC - CLASS A",
+      "code": "DDOG US Equity",
+      "weight": 2.49
+    },
+    {
+      "name": "Space Exploration Technologies Corp",
+      "code": "SPCX US Equity",
+      "weight": 2.21
+    },
+    {
+      "name": "MICROSOFT",
+      "code": "MSFT US Equity",
+      "weight": 2.06
+    },
+    {
+      "name": "Dell Technologies Inc",
+      "code": "DELL US Equity",
+      "weight": 1.76
+    },
+    {
+      "name": "KLA Corp",
+      "code": "KLAC US Equity",
+      "weight": 1.32
+    },
+    {
+      "name": "TERADYNE INC",
+      "code": "TER US Equity",
+      "weight": 1.3
+    },
+    {
+      "name": "ASML HOLDING",
+      "code": "ASML US Equity",
+      "weight": 1.24
+    },
+    {
+      "name": "Robinhood Markets Inc",
+      "code": "HOOD US Equity",
+      "weight": 1.18
+    },
+    {
+      "name": "PALO ALTO NETWORKS INC",
+      "code": "PANW US Equity",
+      "weight": 1.17
+    },
+    {
+      "name": "ELI LILLY & CO",
+      "code": "LLY US Equity",
+      "weight": 1.05
+    },
+    {
+      "name": "Natera Inc",
+      "code": "NTRA US Equity",
+      "weight": 1.03
+    },
+    {
+      "name": "TAKE-TWO INTERACTIVE SOFTWRE",
+      "code": "TTWO US Equity",
+      "weight": 1.03
+    },
+    {
+      "name": "BIOGEN",
+      "code": "BIIB US Equity",
+      "weight": 1.02
+    },
+    {
+      "name": "ILLUMINA INC",
+      "code": "ILMN US Equity",
+      "weight": 1.0
+    },
+    {
+      "name": "Carpenter Technology Corp",
+      "code": "CRS US Equity",
+      "weight": 0.97
+    },
+    {
+      "name": "CISCO SYSTEMS INC",
+      "code": "CSCO US Equity",
+      "weight": 0.86
+    },
+    {
+      "name": "BROADCOM LTD",
+      "code": "AVGO US Equity",
+      "weight": 0.78
+    },
+    {
+      "name": "CORNING INC",
+      "code": "GLW US Equity",
+      "weight": 0.77
+    },
+    {
+      "name": "Lumentum Holdings Inc",
+      "code": "LITE US Equity",
+      "weight": 0.73
+    },
+    {
+      "name": "YANDEX NV-A",
+      "code": "NBIS US Equity",
+      "weight": 0.7
+    },
+    {
+      "name": "Palantir Technologies Inc -A",
+      "code": "PLTR US Equity",
+      "weight": 0.63
+    },
+    {
+      "name": "TEXAS INSTRUMENTS",
+      "code": "TXN US Equity",
+      "weight": 0.58
+    },
+    {
+      "name": "Credo Technology Group Holding Ltd",
+      "code": "CRDO US Equity",
+      "weight": 0.48
+    },
+    {
+      "name": "CROWDSTRIKE HOLDINGS INC - A",
+      "code": "CRWD US Equity",
+      "weight": 0.47
+    },
+    {
+      "name": "Vertiv Holdings Co",
+      "code": "VRT US Equity",
+      "weight": 0.46
+    },
+    {
+      "name": "Silicon Motion Technology Corp",
+      "code": "SIMO US Equity",
+      "weight": 0.45
+    },
+    {
+      "name": "QUALCOMM Inc",
+      "code": "QCOM US Equity",
+      "weight": 0.43
+    },
+    {
+      "name": "ANALOG DEVICES",
+      "code": "ADI US Equity",
+      "weight": 0.4
+    },
+    {
+      "name": "COINBASE GLOBAL INC -CLASS A",
+      "code": "COIN US Equity",
+      "weight": 0.36
+    },
+    {
+      "name": "Tower Semiconductor Ltd",
+      "code": "TSEM US Equity",
+      "weight": 0.34
+    },
+    {
+      "name": "FORTINET INC",
+      "code": "FTNT US Equity",
+      "weight": 0.3
+    },
+    {
+      "name": "GILEAD SCIENCES INC",
+      "code": "GILD US Equity",
+      "weight": 0.3
+    },
+    {
+      "name": "Ciena Corp",
+      "code": "CIEN US Equity",
+      "weight": 0.26
+    },
+    {
+      "name": "Astera Labs Inc",
+      "code": "ALAB US Equity",
+      "weight": 0.18
+    },
+    {
+      "name": "MONOLITHIC POWER SYSTEMS INC",
+      "code": "MPWR US Equity",
+      "weight": 0.15
+    },
+    {
+      "name": "NXP SEMICONDUCTORS NV",
+      "code": "NXPI US Equity",
+      "weight": 0.13
+    },
+    {
+      "name": "Flextronics International Ltd",
+      "code": "FLEX US Equity",
+      "weight": 0.09
+    },
+    {
+      "name": "MICROCHIP TECHNOLOGY INC",
+      "code": "MCHP US Equity",
+      "weight": 0.09
+    },
+    {
+      "name": "Rocket Lab USA Inc",
+      "code": "RKLB US Equity",
+      "weight": 0.09
+    },
+    {
+      "name": "GLOBALFOUNDRIES Inc",
+      "code": "GFS US Equity",
+      "weight": 0.08
+    },
+    {
+      "name": "Coreweave Inc",
+      "code": "CRWV US Equity",
+      "weight": 0.07
+    }
+  ],
+  "market": {
+    "aum": 742964000000,
+    "trading_value": 22333000000
+  }
+}
