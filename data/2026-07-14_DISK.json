@@ -1,0 +1,107 @@
+{
+  "date": "2026-07-14",
+  "etf": "DISK",
+  "code": "DISK",
+  "fetched_at": "2026-07-14T11:06:48.911547",
+  "holdings": [
+    {
+      "name": "KIOXIA HOLDINGS CORP",
+      "code": "285A JP",
+      "weight": 17.71
+    },
+    {
+      "name": "SANDISK CORP",
+      "code": "SNDK",
+      "weight": 17.55
+    },
+    {
+      "name": "SK HYNIX INC",
+      "code": "000660 KS",
+      "weight": 12.64
+    },
+    {
+      "name": "SAMSUNG ELECTRONICS CO LTD",
+      "code": "005930 KS",
+      "weight": 5.53
+    },
+    {
+      "name": "WESTERN DIGITAL CORP",
+      "code": "WDC",
+      "weight": 5.24
+    },
+    {
+      "name": "SEAGATE TECHNOLOGY HOLDINGS PLC",
+      "code": "STX",
+      "weight": 5.19
+    },
+    {
+      "name": "MICRON TECHNOLOGY INC",
+      "code": "MU",
+      "weight": 4.91
+    },
+    {
+      "name": "INNODISK CORP",
+      "code": "5289 TT",
+      "weight": 4.9
+    },
+    {
+      "name": "NANYA TECHNOLOGY CORP",
+      "code": "2408 TT",
+      "weight": 4.75
+    },
+    {
+      "name": "MACRONIX INTERNATIONAL CO LTD",
+      "code": "2337 TT",
+      "weight": 4.41
+    },
+    {
+      "name": "SK SQUARE CO LTD",
+      "code": "402340 KS",
+      "weight": 4.34
+    },
+    {
+      "name": "WINBOND ELECTRONICS CORP",
+      "code": "2344 TT",
+      "weight": 4.2
+    },
+    {
+      "name": "AEHR TEST SYSTEMS",
+      "code": "AEHR",
+      "weight": 2.96
+    },
+    {
+      "name": "SHENZHEN TECHWINSEMI TECHNOLOGY CO LTD",
+      "code": "001309 C2",
+      "weight": 1.81
+    },
+    {
+      "name": "BIWIN STORAGE TECHNOLOGY CO LTD",
+      "code": "688525 C1",
+      "weight": 1.81
+    },
+    {
+      "name": "CASH & CASH EQUIVALENTS",
+      "code": "",
+      "weight": 0.63
+    },
+    {
+      "name": "GOLDKEY TECHNOLOGY CORP",
+      "code": "3135 TT",
+      "weight": 0.54
+    },
+    {
+      "name": "EVERSPIN TECHNOLOGIES INC",
+      "code": "MRAM",
+      "weight": 0.51
+    },
+    {
+      "name": "HANMI SEMICONDUCTOR CO LTD",
+      "code": "042700 KS",
+      "weight": 0.19
+    }
+  ],
+  "market": {
+    "aum_usd": 65890661,
+    "as_of": "2026-07-13"
+  }
+}
