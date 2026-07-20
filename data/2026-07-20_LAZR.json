@@ -1,0 +1,137 @@
+{
+  "date": "2026-07-20",
+  "etf": "LAZR",
+  "code": "LAZR",
+  "fetched_at": "2026-07-20T12:00:36.070190",
+  "holdings": [
+    {
+      "name": "LUMENTUM HOLDINGS INC",
+      "code": "LITE",
+      "weight": 16.62
+    },
+    {
+      "name": "AIXTRON SE",
+      "code": "AIXA GR",
+      "weight": 10.16
+    },
+    {
+      "name": "AXT INC",
+      "code": "AXTI",
+      "weight": 8.9
+    },
+    {
+      "name": "APPLIED OPTOELECTRONICS INC",
+      "code": "AAOI",
+      "weight": 5.57
+    },
+    {
+      "name": "TOWER SEMICONDUCTOR LTD",
+      "code": "TSEM",
+      "weight": 5.0
+    },
+    {
+      "name": "FURUKAWA ELECTRIC CO LTD",
+      "code": "5801 JP",
+      "weight": 4.82
+    },
+    {
+      "name": "AEHR TEST SYSTEMS",
+      "code": "AEHR",
+      "weight": 4.63
+    },
+    {
+      "name": "EOPTOLINK TECHNOLOGY INC LTD",
+      "code": "300502 C2",
+      "weight": 3.69
+    },
+    {
+      "name": "LANDMARK OPTOELECTRONICS CORP",
+      "code": "3081 TT",
+      "weight": 3.66
+    },
+    {
+      "name": "ZHONGJI INNOLIGHT CO LTD",
+      "code": "300308 C2",
+      "weight": 3.59
+    },
+    {
+      "name": "YANGTZE OPTICAL FIBRE & CABLE JOINT STOCK LTD CO",
+      "code": "6869 HK",
+      "weight": 3.25
+    },
+    {
+      "name": "CIENA CORP",
+      "code": "CIEN",
+      "weight": 3.1
+    },
+    {
+      "name": "VEECO INSTRUMENTS INC",
+      "code": "VECO",
+      "weight": 3.04
+    },
+    {
+      "name": "COHERENT CORP",
+      "code": "COHR",
+      "weight": 2.98
+    },
+    {
+      "name": "YUANJIE SEMICONDUCTOR TECHNOLOGY CO LTD",
+      "code": "688498 C1",
+      "weight": 2.82
+    },
+    {
+      "name": "SUZHOU TFC OPTICAL COMMUNICATION CO LTD",
+      "code": "300394 C2",
+      "weight": 2.29
+    },
+    {
+      "name": "WIN SEMICONDUCTORS CORP",
+      "code": "3105 TT",
+      "weight": 2.16
+    },
+    {
+      "name": "IQE PLC",
+      "code": "IQE LN",
+      "weight": 2.13
+    },
+    {
+      "name": "SIVERS SEMICONDUCTORS AB",
+      "code": "SIVE SS",
+      "weight": 2.06
+    },
+    {
+      "name": "SOITEC",
+      "code": "SOI FP",
+      "weight": 2.05
+    },
+    {
+      "name": "INTELLIEPI INC",
+      "code": "4971 TT",
+      "weight": 2.05
+    },
+    {
+      "name": "HIMAX TECHNOLOGIES INC",
+      "code": "HIMX",
+      "weight": 1.79
+    },
+    {
+      "name": "SEMTECH CORP",
+      "code": "SMTC",
+      "weight": 1.63
+    },
+    {
+      "name": "SITIME CORP",
+      "code": "SITM",
+      "weight": 1.63
+    },
+    {
+      "name": "CASH & CASH EQUIVALENTS",
+      "code": "",
+      "weight": 0.38
+    }
+  ],
+  "market": {
+    "aum_usd": 16490025,
+    "as_of": "2026-07-17"
+  }
+}
