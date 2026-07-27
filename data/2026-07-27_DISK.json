@@ -1,0 +1,102 @@
+{
+  "date": "2026-07-27",
+  "etf": "DISK",
+  "code": "DISK",
+  "fetched_at": "2026-07-27T12:41:39.902973",
+  "holdings": [
+    {
+      "name": "KIOXIA HOLDINGS CORP",
+      "code": "285A JP",
+      "weight": 15.82
+    },
+    {
+      "name": "SANDISK CORP",
+      "code": "SNDK",
+      "weight": 15.18
+    },
+    {
+      "name": "SK HYNIX INC",
+      "code": "000660 KS",
+      "weight": 12.97
+    },
+    {
+      "name": "CASH & CASH EQUIVALENTS",
+      "code": "",
+      "weight": 9.82
+    },
+    {
+      "name": "SAMSUNG ELECTRONICS CO LTD",
+      "code": "005930 KS",
+      "weight": 5.15
+    },
+    {
+      "name": "MICRON TECHNOLOGY INC",
+      "code": "MU",
+      "weight": 5.12
+    },
+    {
+      "name": "SEAGATE TECHNOLOGY HOLDINGS PLC",
+      "code": "STX",
+      "weight": 5.03
+    },
+    {
+      "name": "WESTERN DIGITAL CORP",
+      "code": "WDC",
+      "weight": 5.0
+    },
+    {
+      "name": "SK SQUARE CO LTD",
+      "code": "402340 KS",
+      "weight": 4.65
+    },
+    {
+      "name": "NANYA TECHNOLOGY CORP",
+      "code": "2408 TT",
+      "weight": 4.35
+    },
+    {
+      "name": "MACRONIX INTERNATIONAL CO LTD",
+      "code": "2337 TT",
+      "weight": 3.93
+    },
+    {
+      "name": "WINBOND ELECTRONICS CORP",
+      "code": "2344 TT",
+      "weight": 3.85
+    },
+    {
+      "name": "INNODISK CORP",
+      "code": "5289 TT",
+      "weight": 3.33
+    },
+    {
+      "name": "AEHR TEST SYSTEMS",
+      "code": "AEHR",
+      "weight": 2.72
+    },
+    {
+      "name": "BIWIN STORAGE TECHNOLOGY CO LTD",
+      "code": "688525 C1",
+      "weight": 1.39
+    },
+    {
+      "name": "SHENZHEN TECHWINSEMI TECHNOLOGY CO LTD",
+      "code": "001309 C2",
+      "weight": 1.08
+    },
+    {
+      "name": "SK HYNIX INC",
+      "code": "SKHY",
+      "weight": 0.65
+    },
+    {
+      "name": "GOLDKEY TECHNOLOGY CORP",
+      "code": "3135 TT",
+      "weight": 0.04
+    }
+  ],
+  "market": {
+    "aum_usd": 86723385,
+    "as_of": "2026-07-24"
+  }
+}
