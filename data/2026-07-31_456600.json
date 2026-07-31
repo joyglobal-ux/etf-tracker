@@ -1,0 +1,182 @@
+{
+  "date": "2026-07-31",
+  "etf": "TIME_AI",
+  "code": "456600",
+  "fetched_at": "2026-07-31T11:38:19.405112",
+  "holdings": [
+    {
+      "name": "현금",
+      "code": "",
+      "weight": 6.24
+    },
+    {
+      "name": "Advanced Micro Devices Inc",
+      "code": "AMD US EQUITY",
+      "weight": 6.12
+    },
+    {
+      "name": "Seagate Technology Holdings PLC",
+      "code": "STX US EQUITY",
+      "weight": 5.29
+    },
+    {
+      "name": "Kioxia Holdings Corp",
+      "code": "285A JP EQUITY",
+      "weight": 5.28
+    },
+    {
+      "name": "Western Digital Corp",
+      "code": "WDC US EQUITY",
+      "weight": 5.01
+    },
+    {
+      "name": "Intel Corp",
+      "code": "INTC US EQUITY",
+      "weight": 4.55
+    },
+    {
+      "name": "Snowflake Inc",
+      "code": "SNOW US EQUITY",
+      "weight": 4.49
+    },
+    {
+      "name": "Sandisk Corp",
+      "code": "SNDK US EQUITY",
+      "weight": 4.27
+    },
+    {
+      "name": "Alibaba Group Holding Ltd",
+      "code": "BABA US EQUITY",
+      "weight": 4.26
+    },
+    {
+      "name": "NVIDIA Corp",
+      "code": "NVDA US EQUITY",
+      "weight": 3.99
+    },
+    {
+      "name": "ASML Holding NV",
+      "code": "ASML US EQUITY",
+      "weight": 2.94
+    },
+    {
+      "name": "Amazon.com Inc",
+      "code": "AMZN US EQUITY",
+      "weight": 2.86
+    },
+    {
+      "name": "ServiceNow Inc",
+      "code": "NOW US EQUITY",
+      "weight": 2.84
+    },
+    {
+      "name": "International Business Machines Corp",
+      "code": "IBM US EQUITY",
+      "weight": 2.73
+    },
+    {
+      "name": "TIME 차이나AI테크액티브",
+      "code": "0043Y0",
+      "weight": 2.69
+    },
+    {
+      "name": "SK hynix Inc",
+      "code": "SKHY US EQUITY",
+      "weight": 2.58
+    },
+    {
+      "name": "Salesforce Inc",
+      "code": "CRM US EQUITY",
+      "weight": 2.53
+    },
+    {
+      "name": "MercadoLibre Inc",
+      "code": "MELI US EQUITY",
+      "weight": 2.53
+    },
+    {
+      "name": "Murata Manufacturing Co Ltd",
+      "code": "6981 JP EQUITY",
+      "weight": 2.38
+    },
+    {
+      "name": "Accenture PLC",
+      "code": "ACN US EQUITY",
+      "weight": 2.23
+    },
+    {
+      "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+      "code": "TSM US EQUITY",
+      "weight": 2.18
+    },
+    {
+      "name": "Meta Platforms Inc",
+      "code": "META US EQUITY",
+      "weight": 2.14
+    },
+    {
+      "name": "Roper Technologies Inc",
+      "code": "ROP US EQUITY",
+      "weight": 2.1
+    },
+    {
+      "name": "Alphabet Inc",
+      "code": "GOOG US EQUITY",
+      "weight": 2.09
+    },
+    {
+      "name": "PDD Holdings Inc",
+      "code": "PDD US EQUITY",
+      "weight": 2.08
+    },
+    {
+      "name": "eBay Inc",
+      "code": "EBAY US EQUITY",
+      "weight": 1.94
+    },
+    {
+      "name": "QUALCOMM Inc",
+      "code": "QCOM US EQUITY",
+      "weight": 1.86
+    },
+    {
+      "name": "SAP SE",
+      "code": "SAP US EQUITY",
+      "weight": 1.72
+    },
+    {
+      "name": "ARM Holdings PLC",
+      "code": "ARM US EQUITY",
+      "weight": 1.65
+    },
+    {
+      "name": "Z AI Co Ltd",
+      "code": "2513 HK EQUITY",
+      "weight": 1.64
+    },
+    {
+      "name": "Strategy Inc",
+      "code": "MSTR US EQUITY",
+      "weight": 1.47
+    },
+    {
+      "name": "Coinbase Global Inc",
+      "code": "COIN US EQUITY",
+      "weight": 1.22
+    },
+    {
+      "name": "Dell Technologies Inc",
+      "code": "DELL US EQUITY",
+      "weight": 1.15
+    },
+    {
+      "name": "Tencent Holdings Ltd",
+      "code": "700 HK EQUITY",
+      "weight": 0.96
+    }
+  ],
+  "market": {
+    "aum": 2153271100000,
+    "trading_value": 34917000000
+  }
+}
