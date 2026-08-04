@@ -1,0 +1,107 @@
+{
+  "date": "2026-08-04",
+  "etf": "DISK",
+  "code": "DISK",
+  "fetched_at": "2026-08-04T11:39:30.662961",
+  "holdings": [
+    {
+      "name": "KIOXIA HOLDINGS CORP",
+      "code": "285A JP",
+      "weight": 16.91
+    },
+    {
+      "name": "SANDISK CORP",
+      "code": "SNDK",
+      "weight": 15.22
+    },
+    {
+      "name": "SK HYNIX INC",
+      "code": "000660 KS",
+      "weight": 13.31
+    },
+    {
+      "name": "CHANGXIN MEMORY TECHNOLOGIES-SWAP-MREX-L",
+      "code": "BTMTQT8-TRS-07/27/29-L-MREX",
+      "weight": 6.59
+    },
+    {
+      "name": "SAMSUNG ELECTRONICS CO LTD",
+      "code": "005930 KS",
+      "weight": 5.26
+    },
+    {
+      "name": "WESTERN DIGITAL CORP",
+      "code": "WDC",
+      "weight": 5.24
+    },
+    {
+      "name": "SEAGATE TECHNOLOGY HOLDINGS PLC",
+      "code": "STX",
+      "weight": 5.06
+    },
+    {
+      "name": "SK SQUARE CO LTD",
+      "code": "402340 KS",
+      "weight": 4.77
+    },
+    {
+      "name": "MICRON TECHNOLOGY INC",
+      "code": "MU",
+      "weight": 4.76
+    },
+    {
+      "name": "NANYA TECHNOLOGY CORP",
+      "code": "2408 TT",
+      "weight": 4.31
+    },
+    {
+      "name": "MACRONIX INTERNATIONAL CO LTD",
+      "code": "2337 TT",
+      "weight": 3.49
+    },
+    {
+      "name": "AEHR TEST SYSTEMS",
+      "code": "AEHR",
+      "weight": 3.38
+    },
+    {
+      "name": "INNODISK CORP",
+      "code": "5289 TT",
+      "weight": 3.36
+    },
+    {
+      "name": "WINBOND ELECTRONICS CORP",
+      "code": "2344 TT",
+      "weight": 3.35
+    },
+    {
+      "name": "CASH & CASH EQUIVALENTS",
+      "code": "",
+      "weight": 2.15
+    },
+    {
+      "name": "BIWIN STORAGE TECHNOLOGY CO LTD",
+      "code": "688525 C1",
+      "weight": 1.26
+    },
+    {
+      "name": "SHENZHEN TECHWINSEMI TECHNOLOGY CO LTD",
+      "code": "001309 C2",
+      "weight": 0.98
+    },
+    {
+      "name": "SK HYNIX INC",
+      "code": "SKHY",
+      "weight": 0.62
+    },
+    {
+      "name": "GOLDKEY TECHNOLOGY CORP",
+      "code": "3135 TT",
+      "weight": 0.01
+    }
+  ],
+  "market": {
+    "aum_usd": 101161095,
+    "as_of": "2026-08-03"
+  }
+}
