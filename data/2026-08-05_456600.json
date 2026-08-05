@@ -1,0 +1,202 @@
+{
+  "date": "2026-08-05",
+  "etf": "TIME_AI",
+  "code": "456600",
+  "fetched_at": "2026-08-05T11:36:31.318000",
+  "holdings": [
+    {
+      "name": "Kioxia Holdings Corp",
+      "code": "285A JP EQUITY",
+      "weight": 6.87
+    },
+    {
+      "name": "Advanced Micro Devices Inc",
+      "code": "AMD US EQUITY",
+      "weight": 6.25
+    },
+    {
+      "name": "현금",
+      "code": "",
+      "weight": 5.76
+    },
+    {
+      "name": "Seagate Technology Holdings PLC",
+      "code": "STX US EQUITY",
+      "weight": 4.94
+    },
+    {
+      "name": "Western Digital Corp",
+      "code": "WDC US EQUITY",
+      "weight": 4.9
+    },
+    {
+      "name": "Amazon.com Inc",
+      "code": "AMZN US EQUITY",
+      "weight": 4.82
+    },
+    {
+      "name": "Sandisk Corp",
+      "code": "SNDK US EQUITY",
+      "weight": 4.63
+    },
+    {
+      "name": "Intel Corp",
+      "code": "INTC US EQUITY",
+      "weight": 4.6
+    },
+    {
+      "name": "Alphabet Inc",
+      "code": "GOOG US EQUITY",
+      "weight": 4.15
+    },
+    {
+      "name": "Alibaba Group Holding Ltd",
+      "code": "BABA US EQUITY",
+      "weight": 3.75
+    },
+    {
+      "name": "NVIDIA Corp",
+      "code": "NVDA US EQUITY",
+      "weight": 3.43
+    },
+    {
+      "name": "Snowflake Inc",
+      "code": "SNOW US EQUITY",
+      "weight": 3.39
+    },
+    {
+      "name": "TIME 차이나AI테크액티브",
+      "code": "0043Y0",
+      "weight": 2.77
+    },
+    {
+      "name": "SK hynix Inc",
+      "code": "SKHY US EQUITY",
+      "weight": 2.64
+    },
+    {
+      "name": "Murata Manufacturing Co Ltd",
+      "code": "6981 JP EQUITY",
+      "weight": 2.58
+    },
+    {
+      "name": "삼성전기",
+      "code": "009150",
+      "weight": 2.56
+    },
+    {
+      "name": "ASML Holding NV",
+      "code": "ASML US EQUITY",
+      "weight": 2.44
+    },
+    {
+      "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+      "code": "TSM US EQUITY",
+      "weight": 2.16
+    },
+    {
+      "name": "International Business Machines Corp",
+      "code": "IBM US EQUITY",
+      "weight": 1.99
+    },
+    {
+      "name": "Meta Platforms Inc",
+      "code": "META US EQUITY",
+      "weight": 1.9
+    },
+    {
+      "name": "MercadoLibre Inc",
+      "code": "MELI US EQUITY",
+      "weight": 1.88
+    },
+    {
+      "name": "Salesforce Inc",
+      "code": "CRM US EQUITY",
+      "weight": 1.77
+    },
+    {
+      "name": "ARM Holdings PLC",
+      "code": "ARM US EQUITY",
+      "weight": 1.6
+    },
+    {
+      "name": "ServiceNow Inc",
+      "code": "NOW US EQUITY",
+      "weight": 1.54
+    },
+    {
+      "name": "Accenture PLC",
+      "code": "ACN US EQUITY",
+      "weight": 1.46
+    },
+    {
+      "name": "PDD Holdings Inc",
+      "code": "PDD US EQUITY",
+      "weight": 1.44
+    },
+    {
+      "name": "eBay Inc",
+      "code": "EBAY US EQUITY",
+      "weight": 1.37
+    },
+    {
+      "name": "Strategy Inc",
+      "code": "MSTR US EQUITY",
+      "weight": 1.36
+    },
+    {
+      "name": "Roper Technologies Inc",
+      "code": "ROP US EQUITY",
+      "weight": 1.36
+    },
+    {
+      "name": "Z AI Co Ltd",
+      "code": "2513 HK EQUITY",
+      "weight": 1.35
+    },
+    {
+      "name": "Applied Optoelectronics Inc",
+      "code": "AAOI US EQUITY",
+      "weight": 1.15
+    },
+    {
+      "name": "QUALCOMM Inc",
+      "code": "QCOM US EQUITY",
+      "weight": 1.15
+    },
+    {
+      "name": "SAP SE",
+      "code": "SAP US EQUITY",
+      "weight": 1.08
+    },
+    {
+      "name": "Lumentum Holdings Inc",
+      "code": "LITE US EQUITY",
+      "weight": 1.06
+    },
+    {
+      "name": "Tower Semiconductor Ltd",
+      "code": "TSEM US EQUITY",
+      "weight": 1.05
+    },
+    {
+      "name": "Coinbase Global Inc",
+      "code": "COIN US EQUITY",
+      "weight": 1.02
+    },
+    {
+      "name": "Tencent Holdings Ltd",
+      "code": "700 HK EQUITY",
+      "weight": 0.92
+    },
+    {
+      "name": "Dell Technologies Inc",
+      "code": "DELL US EQUITY",
+      "weight": 0.9
+    }
+  ],
+  "market": {
+    "aum": 2280043000000,
+    "trading_value": 14482000000
+  }
+}
