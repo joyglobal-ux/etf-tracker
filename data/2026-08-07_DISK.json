@@ -1,0 +1,102 @@
+{
+  "date": "2026-08-07",
+  "etf": "DISK",
+  "code": "DISK",
+  "fetched_at": "2026-08-07T10:25:32.667468",
+  "holdings": [
+    {
+      "name": "KIOXIA HOLDINGS CORP",
+      "code": "285A JP",
+      "weight": 16.11
+    },
+    {
+      "name": "SANDISK CORP",
+      "code": "SNDK",
+      "weight": 14.78
+    },
+    {
+      "name": "SK HYNIX INC",
+      "code": "000660 KS",
+      "weight": 12.99
+    },
+    {
+      "name": "CHANGXIN MEMORY TECHNOLOGIES-SWAP-MREX-L",
+      "code": "BTMTQT8-TRS-07/27/29-L-MREX",
+      "weight": 7.4
+    },
+    {
+      "name": "NANYA TECHNOLOGY CORP",
+      "code": "2408 TT",
+      "weight": 5.37
+    },
+    {
+      "name": "SEAGATE TECHNOLOGY HOLDINGS PLC",
+      "code": "STX",
+      "weight": 5.17
+    },
+    {
+      "name": "SAMSUNG ELECTRONICS CO LTD",
+      "code": "005930 KS",
+      "weight": 5.04
+    },
+    {
+      "name": "MICRON TECHNOLOGY INC",
+      "code": "MU",
+      "weight": 5.03
+    },
+    {
+      "name": "SK SQUARE CO LTD",
+      "code": "402340 KS",
+      "weight": 4.62
+    },
+    {
+      "name": "WESTERN DIGITAL CORP",
+      "code": "WDC",
+      "weight": 4.45
+    },
+    {
+      "name": "WINBOND ELECTRONICS CORP",
+      "code": "2344 TT",
+      "weight": 4.43
+    },
+    {
+      "name": "MACRONIX INTERNATIONAL CO LTD",
+      "code": "2337 TT",
+      "weight": 4.23
+    },
+    {
+      "name": "INNODISK CORP",
+      "code": "5289 TT",
+      "weight": 3.99
+    },
+    {
+      "name": "AEHR TEST SYSTEMS",
+      "code": "AEHR",
+      "weight": 3.64
+    },
+    {
+      "name": "BIWIN STORAGE TECHNOLOGY CO LTD",
+      "code": "688525 C1",
+      "weight": 1.41
+    },
+    {
+      "name": "SHENZHEN TECHWINSEMI TECHNOLOGY CO LTD",
+      "code": "001309 C2",
+      "weight": 1.08
+    },
+    {
+      "name": "SK HYNIX INC",
+      "code": "SKHY",
+      "weight": 0.62
+    },
+    {
+      "name": "CASH & CASH EQUIVALENTS",
+      "code": "",
+      "weight": -0.37
+    }
+  ],
+  "market": {
+    "aum_usd": 85155381,
+    "as_of": "2026-08-06"
+  }
+}
