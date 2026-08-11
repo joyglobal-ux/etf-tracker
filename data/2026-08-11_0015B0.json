@@ -1,0 +1,247 @@
+{
+  "date": "2026-08-11",
+  "etf": "KoAct나스닥성장",
+  "code": "0015B0",
+  "fetched_at": "2026-08-11T10:24:52.477512",
+  "holdings": [
+    {
+      "name": "ADVANCED MICRO DEVICES",
+      "code": "AMD US Equity",
+      "weight": 6.64
+    },
+    {
+      "name": "Snowflake Inc   - CL A",
+      "code": "SNOW US Equity",
+      "weight": 5.47
+    },
+    {
+      "name": "BLOOM ENERGY CORPORATION",
+      "code": "BE US Equity",
+      "weight": 5.38
+    },
+    {
+      "name": "INTEL Corp",
+      "code": "INTC US Equity",
+      "weight": 4.41
+    },
+    {
+      "name": "Amazon.com Inc",
+      "code": "AMZN US Equity",
+      "weight": 4.12
+    },
+    {
+      "name": "Applied Optoelectronics Inc",
+      "code": "AAOI US Equity",
+      "weight": 3.7
+    },
+    {
+      "name": "Palantir Technologies Inc -A",
+      "code": "PLTR US Equity",
+      "weight": 3.47
+    },
+    {
+      "name": "SEAGATE TECHNOLOGY",
+      "code": "STX US Equity",
+      "weight": 3.24
+    },
+    {
+      "name": "ARM Holdings PLC",
+      "code": "ARM US Equity",
+      "weight": 3.06
+    },
+    {
+      "name": "ALPHABET INC-CL A",
+      "code": "GOOGL US Equity",
+      "weight": 3.01
+    },
+    {
+      "name": "Sandisk Corp/DE",
+      "code": "SNDK US Equity",
+      "weight": 2.94
+    },
+    {
+      "name": "Coreweave Inc",
+      "code": "CRWV US Equity",
+      "weight": 2.71
+    },
+    {
+      "name": "Cloudflare Inc",
+      "code": "NET US Equity",
+      "weight": 2.64
+    },
+    {
+      "name": "MICROSOFT",
+      "code": "MSFT US Equity",
+      "weight": 2.6
+    },
+    {
+      "name": "Astera Labs Inc",
+      "code": "ALAB US Equity",
+      "weight": 2.35
+    },
+    {
+      "name": "Lumentum Holdings Inc",
+      "code": "LITE US Equity",
+      "weight": 2.33
+    },
+    {
+      "name": "ALIBABA GROUP HOLDING-SP ADR",
+      "code": "BABA US Equity",
+      "weight": 2.24
+    },
+    {
+      "name": "YANDEX NV-A",
+      "code": "NBIS US Equity",
+      "weight": 2.11
+    },
+    {
+      "name": "DYNATRACE INC",
+      "code": "DT US Equity",
+      "weight": 1.97
+    },
+    {
+      "name": "Dell Technologies Inc",
+      "code": "DELL US Equity",
+      "weight": 1.94
+    },
+    {
+      "name": "LAM RESEARCH",
+      "code": "LRCX US Equity",
+      "weight": 1.92
+    },
+    {
+      "name": "FORTINET INC",
+      "code": "FTNT US Equity",
+      "weight": 1.81
+    },
+    {
+      "name": "MICRON TECH",
+      "code": "MU US Equity",
+      "weight": 1.67
+    },
+    {
+      "name": "MARVELL TECHNOLOGY INC",
+      "code": "MRVL US Equity",
+      "weight": 1.65
+    },
+    {
+      "name": "AXT Inc",
+      "code": "AXTI US Equity",
+      "weight": 1.65
+    },
+    {
+      "name": "ILLUMINA INC",
+      "code": "ILMN US Equity",
+      "weight": 1.63
+    },
+    {
+      "name": "BROADCOM LTD",
+      "code": "AVGO US Equity",
+      "weight": 1.61
+    },
+    {
+      "name": "SERVICENOW INC",
+      "code": "NOW US Equity",
+      "weight": 1.59
+    },
+    {
+      "name": "NETAPP INC",
+      "code": "NTAP US Equity",
+      "weight": 1.47
+    },
+    {
+      "name": "Moog Inc",
+      "code": "MOG/A US Equity",
+      "weight": 1.46
+    },
+    {
+      "name": "DATADOG INC - CLASS A",
+      "code": "DDOG US Equity",
+      "weight": 1.43
+    },
+    {
+      "name": "Akamai Technologies Inc",
+      "code": "AKAM US Equity",
+      "weight": 1.41
+    },
+    {
+      "name": "Timken Co/The",
+      "code": "TKR US Equity",
+      "weight": 1.39
+    },
+    {
+      "name": "OKTA INC",
+      "code": "OKTA US Equity",
+      "weight": 1.31
+    },
+    {
+      "name": "APPLIED MATERIALS INC",
+      "code": "AMAT US Equity",
+      "weight": 1.3
+    },
+    {
+      "name": "LB Pharmaceuticals Inc",
+      "code": "LBRX US Equity",
+      "weight": 1.3
+    },
+    {
+      "name": "Natera Inc",
+      "code": "NTRA US Equity",
+      "weight": 1.28
+    },
+    {
+      "name": "NVIDIA Corp",
+      "code": "NVDA US Equity",
+      "weight": 1.1
+    },
+    {
+      "name": "BeOne Medicines Ltd",
+      "code": "ONC US Equity",
+      "weight": 1.05
+    },
+    {
+      "name": "Carpenter Technology Corp",
+      "code": "CRS US Equity",
+      "weight": 1.02
+    },
+    {
+      "name": "JAZZ PHARMACEUTICALS PLC",
+      "code": "JAZZ US Equity",
+      "weight": 1.0
+    },
+    {
+      "name": "TERADYNE INC",
+      "code": "TER US Equity",
+      "weight": 0.99
+    },
+    {
+      "name": "CROWDSTRIKE HOLDINGS INC - A",
+      "code": "CRWD US Equity",
+      "weight": 0.56
+    },
+    {
+      "name": "PALO ALTO NETWORKS INC",
+      "code": "PANW US Equity",
+      "weight": 0.56
+    },
+    {
+      "name": "Oruka Therapeutics Inc",
+      "code": "ORKA US Equity",
+      "weight": 0.55
+    },
+    {
+      "name": "WESTERN DIGITAL",
+      "code": "WDC US Equity",
+      "weight": 0.5
+    },
+    {
+      "name": "GILEAD SCIENCES INC",
+      "code": "GILD US Equity",
+      "weight": 0.43
+    }
+  ],
+  "market": {
+    "aum": 626063750000,
+    "trading_value": 8393000000
+  }
+}
