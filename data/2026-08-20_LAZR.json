@@ -1,0 +1,147 @@
+{
+  "date": "2026-08-20",
+  "etf": "LAZR",
+  "code": "LAZR",
+  "fetched_at": "2026-08-20T09:59:56.971622",
+  "holdings": [
+    {
+      "name": "LUMENTUM HOLDINGS INC",
+      "code": "LITE",
+      "weight": 14.85
+    },
+    {
+      "name": "AXT INC",
+      "code": "AXTI",
+      "weight": 9.99
+    },
+    {
+      "name": "AIXTRON SE",
+      "code": "AIXA GR",
+      "weight": 9.49
+    },
+    {
+      "name": "APPLIED OPTOELECTRONICS INC",
+      "code": "AAOI",
+      "weight": 6.06
+    },
+    {
+      "name": "LANDMARK OPTOELECTRONICS CORP",
+      "code": "3081 TT",
+      "weight": 5.15
+    },
+    {
+      "name": "AEHR TEST SYSTEMS",
+      "code": "AEHR",
+      "weight": 4.76
+    },
+    {
+      "name": "FURUKAWA ELECTRIC CO LTD",
+      "code": "5801 JP",
+      "weight": 4.42
+    },
+    {
+      "name": "TOWER SEMICONDUCTOR LTD",
+      "code": "TSEM",
+      "weight": 4.25
+    },
+    {
+      "name": "COHERENT CORP",
+      "code": "COHR",
+      "weight": 3.62
+    },
+    {
+      "name": "YANGTZE OPTICAL FIBRE & CABLE JOINT STOCK LTD CO",
+      "code": "6869 HK",
+      "weight": 3.02
+    },
+    {
+      "name": "YUANJIE SEMICONDUCTOR TECHNOLOGY CO LTD",
+      "code": "688498 C1",
+      "weight": 2.9
+    },
+    {
+      "name": "EOPTOLINK TECHNOLOGY INC LTD",
+      "code": "300502 C2",
+      "weight": 2.82
+    },
+    {
+      "name": "CIENA CORP",
+      "code": "CIEN",
+      "weight": 2.81
+    },
+    {
+      "name": "SUZHOU TFC OPTICAL COMMUNICATION CO LTD",
+      "code": "300394 C2",
+      "weight": 2.77
+    },
+    {
+      "name": "ZHONGJI INNOLIGHT CO LTD",
+      "code": "300308 C2",
+      "weight": 2.73
+    },
+    {
+      "name": "ANTHROPIC SPV EXPOSURE",
+      "code": "ANTHROPIC SPV",
+      "weight": 2.48
+    },
+    {
+      "name": "INTELLIEPI INC",
+      "code": "4971 TT",
+      "weight": 2.25
+    },
+    {
+      "name": "IQE PLC",
+      "code": "IQE LN",
+      "weight": 2.12
+    },
+    {
+      "name": "SOITEC",
+      "code": "SOI FP",
+      "weight": 2.01
+    },
+    {
+      "name": "WIN SEMICONDUCTORS CORP",
+      "code": "3105 TT",
+      "weight": 1.81
+    },
+    {
+      "name": "SIVERS SEMICONDUCTORS AB",
+      "code": "SIVE SS",
+      "weight": 1.77
+    },
+    {
+      "name": "SITIME CORP",
+      "code": "SITM",
+      "weight": 1.63
+    },
+    {
+      "name": "CHROMA ATE INC",
+      "code": "2360 TT",
+      "weight": 1.56
+    },
+    {
+      "name": "SEMTECH CORP",
+      "code": "SMTC",
+      "weight": 1.55
+    },
+    {
+      "name": "HIMAX TECHNOLOGIES INC",
+      "code": "HIMX",
+      "weight": 1.5
+    },
+    {
+      "name": "MPI CORP",
+      "code": "6223 TT",
+      "weight": 1.47
+    },
+    {
+      "name": "CASH & CASH EQUIVALENTS",
+      "code": "",
+      "weight": 0.21
+    }
+  ],
+  "market": {
+    "aum_usd": 80710467,
+    "as_of": "2026-08-19"
+  }
+}
