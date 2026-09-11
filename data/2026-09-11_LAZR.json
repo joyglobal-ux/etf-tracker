@@ -1,0 +1,147 @@
+{
+  "date": "2026-09-11",
+  "etf": "LAZR",
+  "code": "LAZR",
+  "fetched_at": "2026-09-11T13:42:53.737095",
+  "holdings": [
+    {
+      "name": "LUMENTUM HOLDINGS INC",
+      "code": "LITE",
+      "weight": 14.4
+    },
+    {
+      "name": "ANTHROPIC SPV EXPOSURE",
+      "code": "ANTHROPIC SPV",
+      "weight": 13.39
+    },
+    {
+      "name": "AXT INC",
+      "code": "AXTI",
+      "weight": 8.2
+    },
+    {
+      "name": "AIXTRON SE",
+      "code": "AIXA GR",
+      "weight": 8.01
+    },
+    {
+      "name": "LANDMARK OPTOELECTRONICS CORP",
+      "code": "3081 TT",
+      "weight": 4.73
+    },
+    {
+      "name": "APPLIED OPTOELECTRONICS INC",
+      "code": "AAOI",
+      "weight": 4.4
+    },
+    {
+      "name": "FURUKAWA ELECTRIC CO LTD",
+      "code": "5801 JP",
+      "weight": 4.16
+    },
+    {
+      "name": "AEHR TEST SYSTEMS",
+      "code": "AEHR",
+      "weight": 3.55
+    },
+    {
+      "name": "YANGTZE OPTICAL FIBRE & CABLE JOINT STOCK LTD CO",
+      "code": "6869 HK",
+      "weight": 3.51
+    },
+    {
+      "name": "YUANJIE SEMICONDUCTOR TECHNOLOGY CO LTD",
+      "code": "688498 C1",
+      "weight": 3.37
+    },
+    {
+      "name": "TOWER SEMICONDUCTOR LTD",
+      "code": "TSEM",
+      "weight": 3.36
+    },
+    {
+      "name": "COHERENT CORP",
+      "code": "COHR",
+      "weight": 3.17
+    },
+    {
+      "name": "INTELLIEPI INC",
+      "code": "4971 TT",
+      "weight": 2.23
+    },
+    {
+      "name": "SOITEC",
+      "code": "SOI FP",
+      "weight": 2.15
+    },
+    {
+      "name": "ZHONGJI INNOLIGHT CO LTD",
+      "code": "300308 C2",
+      "weight": 2.03
+    },
+    {
+      "name": "CIENA CORP",
+      "code": "CIEN",
+      "weight": 2.02
+    },
+    {
+      "name": "EOPTOLINK TECHNOLOGY INC LTD",
+      "code": "300502 C2",
+      "weight": 2.0
+    },
+    {
+      "name": "WIN SEMICONDUCTORS CORP",
+      "code": "3105 TT",
+      "weight": 2.0
+    },
+    {
+      "name": "SUZHOU TFC OPTICAL COMMUNICATION CO LTD",
+      "code": "300394 C2",
+      "weight": 1.98
+    },
+    {
+      "name": "IQE PLC",
+      "code": "IQE LN",
+      "weight": 1.75
+    },
+    {
+      "name": "SEMTECH CORP",
+      "code": "SMTC",
+      "weight": 1.69
+    },
+    {
+      "name": "CHROMA ATE INC",
+      "code": "2360 TT",
+      "weight": 1.37
+    },
+    {
+      "name": "MPI CORP",
+      "code": "6223 TT",
+      "weight": 1.37
+    },
+    {
+      "name": "SITIME CORP",
+      "code": "SITM",
+      "weight": 1.36
+    },
+    {
+      "name": "CASH & CASH EQUIVALENTS",
+      "code": "",
+      "weight": 1.33
+    },
+    {
+      "name": "HIMAX TECHNOLOGIES INC",
+      "code": "HIMX",
+      "weight": 1.28
+    },
+    {
+      "name": "SIVERS SEMICONDUCTORS AB",
+      "code": "SIVE SS",
+      "weight": 1.2
+    }
+  ],
+  "market": {
+    "aum_usd": 93695703,
+    "as_of": "2026-09-10"
+  }
+}
