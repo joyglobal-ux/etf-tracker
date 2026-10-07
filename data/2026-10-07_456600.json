@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-07",
+  "etf": "TIME_AI",
+  "code": "456600",
+  "fetched_at": "2026-10-07T16:47:41.988827",
+  "holdings": [
+    {
+      "name": "Intel Corp",
+      "code": "INTC US EQUITY",
+      "weight": 5.98
+    },
+    {
+      "name": "NVIDIA Corp",
+      "code": "NVDA US EQUITY",
+      "weight": 4.69
+    },
+    {
+      "name": "NASDAQ 100 E-MINI INDEX DEC 2026",
+      "code": "NQZ6 INDEX",
+      "weight": 4.24
+    },
+    {
+      "name": "Sandisk Corp",
+      "code": "SNDK US EQUITY",
+      "weight": 4.23
+    },
+    {
+      "name": "Advanced Micro Devices Inc",
+      "code": "AMD US EQUITY",
+      "weight": 4.21
+    },
+    {
+      "name": "SK hynix Inc",
+      "code": "SKHY US EQUITY",
+      "weight": 4.16
+    },
+    {
+      "name": "Dell Technologies Inc",
+      "code": "DELL US EQUITY",
+      "weight": 3.68
+    },
+    {
+      "name": "삼성전기",
+      "code": "009150",
+      "weight": 3.52
+    },
+    {
+      "name": "Meta Platforms Inc",
+      "code": "META US EQUITY",
+      "weight": 3.26
+    },
+    {
+      "name": "Lumentum Holdings Inc",
+      "code": "LITE US EQUITY",
+      "weight": 3.08
+    },
+    {
+      "name": "TIME 차이나AI테크액티브",
+      "code": "0043Y0",
+      "weight": 3.08
+    },
+    {
+      "name": "Kioxia Holdings Corp",
+      "code": "285A JP EQUITY",
+      "weight": 2.97
+    },
+    {
+      "name": "Alphabet Inc",
+      "code": "GOOG US EQUITY",
+      "weight": 2.64
+    },
+    {
+      "name": "Applied Optoelectronics Inc",
+      "code": "AAOI US EQUITY",
+      "weight": 2.63
+    },
+    {
+      "name": "Snowflake Inc",
+      "code": "SNOW US EQUITY",
+      "weight": 2.49
+    },
+    {
+      "name": "Amazon.com Inc",
+      "code": "AMZN US EQUITY",
+      "weight": 2.41
+    },
+    {
+      "name": "Murata Manufacturing Co Ltd",
+      "code": "6981 JP EQUITY",
+      "weight": 2.37
+    },
+    {
+      "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+      "code": "TSM US EQUITY",
+      "weight": 2.3
+    },
+    {
+      "name": "Alibaba Group Holding Ltd",
+      "code": "BABA US EQUITY",
+      "weight": 2.18
+    },
+    {
+      "name": "Salesforce Inc",
+      "code": "CRM US EQUITY",
+      "weight": 2.05
+    },
+    {
+      "name": "SAP SE",
+      "code": "SAP US EQUITY",
+      "weight": 1.99
+    },
+    {
+      "name": "Tesla Inc",
+      "code": "TSLA US EQUITY",
+      "weight": 1.97
+    },
+    {
+      "name": "Western Digital Corp",
+      "code": "WDC US EQUITY",
+      "weight": 1.94
+    },
+    {
+      "name": "ARM Holdings PLC",
+      "code": "ARM US EQUITY",
+      "weight": 1.91
+    },
+    {
+      "name": "Seagate Technology Holdings PLC",
+      "code": "STX US EQUITY",
+      "weight": 1.9
+    },
+    {
+      "name": "Coinbase Global Inc",
+      "code": "COIN US EQUITY",
+      "weight": 1.78
+    },
+    {
+      "name": "현금",
+      "code": "",
+      "weight": 1.73
+    },
+    {
+      "name": "Strategy Inc",
+      "code": "MSTR US EQUITY",
+      "weight": 1.71
+    },
+    {
+      "name": "ServiceNow Inc",
+      "code": "NOW US EQUITY",
+      "weight": 1.69
+    },
+    {
+      "name": "MercadoLibre Inc",
+      "code": "MELI US EQUITY",
+      "weight": 1.68
+    },
+    {
+      "name": "ASML Holding NV",
+      "code": "ASML US EQUITY",
+      "weight": 1.68
+    },
+    {
+      "name": "Accenture PLC",
+      "code": "ACN US EQUITY",
+      "weight": 1.54
+    },
+    {
+      "name": "International Business Machines Corp",
+      "code": "IBM US EQUITY",
+      "weight": 1.38
+    },
+    {
+      "name": "QUALCOMM Inc",
+      "code": "QCOM US EQUITY",
+      "weight": 1.29
+    },
+    {
+      "name": "Roper Technologies Inc",
+      "code": "ROP US EQUITY",
+      "weight": 1.19
+    },
+    {
+      "name": "Z AI Co Ltd",
+      "code": "2513 HK EQUITY",
+      "weight": 1.16
+    },
+    {
+      "name": "Minimax Group Inc",
+      "code": "100 HK EQUITY",
+      "weight": 1.04
+    },
+    {
+      "name": "Fujikura Ltd",
+      "code": "5803 JP EQUITY",
+      "weight": 1.03
+    },
+    {
+      "name": "Bloom Energy Corp",
+      "code": "BE US EQUITY",
+      "weight": 1.0
+    },
+    {
+      "name": "Tempus AI Inc",
+      "code": "TEM US EQUITY",
+      "weight": 0.97
+    },
+    {
+      "name": "Eoptolink Technology Inc Ltd",
+      "code": "300502 CH EQUITY",
+      "weight": 0.9
+    },
+    {
+      "name": "Zhongji Innolight Co Ltd",
+      "code": "300308 CH EQUITY",
+      "weight": 0.84
+    },
+    {
+      "name": "eBay Inc",
+      "code": "EBAY US EQUITY",
+      "weight": 0.8
+    },
+    {
+      "name": "PDD Holdings Inc",
+      "code": "PDD US EQUITY",
+      "weight": 0.75
+    }
+  ],
+  "market": {
+    "aum": 2111475000000,
+    "trading_value": 5960000000
+  }
+}
