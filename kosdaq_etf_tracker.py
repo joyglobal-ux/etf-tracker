@@ -815,6 +815,7 @@ def generate_html(results: dict, today: str) -> Path:
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>액티브 ETF 트래커 — {today}</title>
 <style>
