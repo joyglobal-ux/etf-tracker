@@ -1,0 +1,232 @@
+{
+  "date": "2026-11-11",
+  "etf": "TIME_AI",
+  "code": "456600",
+  "fetched_at": "2026-11-11T17:21:20.639270",
+  "holdings": [
+    {
+      "name": "Amazon.com Inc",
+      "code": "AMZN US EQUITY",
+      "weight": 5.77
+    },
+    {
+      "name": "Microsoft Corp",
+      "code": "MSFT US EQUITY",
+      "weight": 5.49
+    },
+    {
+      "name": "Accenture PLC",
+      "code": "ACN US EQUITY",
+      "weight": 4.86
+    },
+    {
+      "name": "NASDAQ 100 E-MINI INDEX DEC 2026",
+      "code": "NQZ6 INDEX",
+      "weight": 4.15
+    },
+    {
+      "name": "Advanced Micro Devices Inc",
+      "code": "AMD US EQUITY",
+      "weight": 4.07
+    },
+    {
+      "name": "SAP SE",
+      "code": "SAP US EQUITY",
+      "weight": 3.98
+    },
+    {
+      "name": "Alibaba Group Holding Ltd",
+      "code": "BABA US EQUITY",
+      "weight": 3.79
+    },
+    {
+      "name": "International Business Machines Corp",
+      "code": "IBM US EQUITY",
+      "weight": 3.25
+    },
+    {
+      "name": "TIME 차이나AI테크액티브",
+      "code": "0043Y0",
+      "weight": 3.23
+    },
+    {
+      "name": "Roper Technologies Inc",
+      "code": "ROP US EQUITY",
+      "weight": 3.21
+    },
+    {
+      "name": "Alphabet Inc",
+      "code": "GOOG US EQUITY",
+      "weight": 3.01
+    },
+    {
+      "name": "Snowflake Inc",
+      "code": "SNOW US EQUITY",
+      "weight": 2.98
+    },
+    {
+      "name": "Salesforce Inc",
+      "code": "CRM US EQUITY",
+      "weight": 2.8
+    },
+    {
+      "name": "QUALCOMM Inc",
+      "code": "QCOM US EQUITY",
+      "weight": 2.69
+    },
+    {
+      "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+      "code": "TSM US EQUITY",
+      "weight": 2.53
+    },
+    {
+      "name": "NVIDIA Corp",
+      "code": "NVDA US EQUITY",
+      "weight": 2.44
+    },
+    {
+      "name": "Intel Corp",
+      "code": "INTC US EQUITY",
+      "weight": 2.43
+    },
+    {
+      "name": "ServiceNow Inc",
+      "code": "NOW US EQUITY",
+      "weight": 2.27
+    },
+    {
+      "name": "Fujitsu Ltd",
+      "code": "6702 JP EQUITY",
+      "weight": 2.26
+    },
+    {
+      "name": "Meta Platforms Inc",
+      "code": "META US EQUITY",
+      "weight": 2.09
+    },
+    {
+      "name": "ASML Holding NV",
+      "code": "ASML US EQUITY",
+      "weight": 2.02
+    },
+    {
+      "name": "Tesla Inc",
+      "code": "TSLA US EQUITY",
+      "weight": 2.02
+    },
+    {
+      "name": "Sandisk Corp",
+      "code": "SNDK US EQUITY",
+      "weight": 1.97
+    },
+    {
+      "name": "Bloom Energy Corp",
+      "code": "BE US EQUITY",
+      "weight": 1.95
+    },
+    {
+      "name": "eBay Inc",
+      "code": "EBAY US EQUITY",
+      "weight": 1.83
+    },
+    {
+      "name": "SK hynix Inc",
+      "code": "SKHY US EQUITY",
+      "weight": 1.79
+    },
+    {
+      "name": "Lumentum Holdings Inc",
+      "code": "LITE US EQUITY",
+      "weight": 1.77
+    },
+    {
+      "name": "현금",
+      "code": "",
+      "weight": 1.38
+    },
+    {
+      "name": "Twilio Inc",
+      "code": "TWLO US EQUITY",
+      "weight": 1.38
+    },
+    {
+      "name": "삼성전기",
+      "code": "009150",
+      "weight": 1.37
+    },
+    {
+      "name": "Murata Manufacturing Co Ltd",
+      "code": "6981 JP EQUITY",
+      "weight": 1.33
+    },
+    {
+      "name": "Crowdstrike Holdings Inc",
+      "code": "CRWD US EQUITY",
+      "weight": 1.29
+    },
+    {
+      "name": "Western Digital Corp",
+      "code": "WDC US EQUITY",
+      "weight": 1.25
+    },
+    {
+      "name": "Palo Alto Networks Inc",
+      "code": "PANW US EQUITY",
+      "weight": 1.23
+    },
+    {
+      "name": "Okta Inc",
+      "code": "OKTA US EQUITY",
+      "weight": 1.18
+    },
+    {
+      "name": "Workday Inc",
+      "code": "WDAY US EQUITY",
+      "weight": 1.16
+    },
+    {
+      "name": "UBTech Robotics Corp Ltd",
+      "code": "9880 HK EQUITY",
+      "weight": 1.15
+    },
+    {
+      "name": "Horizon Robotics",
+      "code": "9660 HK EQUITY",
+      "weight": 1.08
+    },
+    {
+      "name": "Baker Hughes Co",
+      "code": "BKR US EQUITY",
+      "weight": 1.01
+    },
+    {
+      "name": "NetApp Inc",
+      "code": "NTAP US EQUITY",
+      "weight": 0.97
+    },
+    {
+      "name": "Advantest Corp",
+      "code": "6857 JP EQUITY",
+      "weight": 0.96
+    },
+    {
+      "name": "MercadoLibre Inc",
+      "code": "MELI US EQUITY",
+      "weight": 0.91
+    },
+    {
+      "name": "Seagate Technology Holdings PLC",
+      "code": "STX US EQUITY",
+      "weight": 0.9
+    },
+    {
+      "name": "Everpure Inc",
+      "code": "P US EQUITY",
+      "weight": 0.84
+    }
+  ],
+  "market": {
+    "aum": 1572649800000,
+    "trading_value": 3939000000
+  }
+}
